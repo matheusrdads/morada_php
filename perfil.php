@@ -1,9 +1,10 @@
 <?php
-
+// session_start();
+// print_r($_SESSION);
 include('./php/includes/verifica_login.php');
 
 
-require "./php/includes/menu.html";
+require "./php/includes/menu.php";
 
 ?>
 
@@ -45,44 +46,46 @@ integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLP
             <h4>Sobre</h4>
             <p><?php echo $_SESSION['sobre'];?>
             </p>
+            <p><?php echo $_SESSION['sobrenome'];?>
+            </p>
 
             <h4>Informações da conta</h4>
             <p>Nome: <?php echo $_SESSION['nome'];?> </p>
             
             <p>Sobrenome: <?php 
-            if (!$_SESSION['sobrenome'] = null)
-                echo "Não Cadastrado";
-            else
+            // if ($_SESSION['sobrenome'] = null)
+            //     echo "Não Cadastrado";
+            // else
                 echo $_SESSION['sobrenome'];?> </p>
             
             <p>Endereço: <?php
-            if (!$_SESSION['endereco'] = null)
-            echo "Não Cadastrado";
-        else
+        //     if (!$_SESSION['endereco'] = null)
+        //     echo "Não Cadastrado";
+        // else
           echo $_SESSION['endereco'];?> </p>
             
             <p>Bairro: <?php 
-            if (!$_SESSION['bairro'] = null)
-                echo "Não Cadastrado";
-            else
+            // if (!$_SESSION['bairro'] = null)
+            //     echo "Não Cadastrado";
+            // else
              echo $_SESSION['bairro'];?>
             </p>
             
             <p>Complemento: <?php
-            if (!$_SESSION['complemento'] = null)
-            echo "Não Cadastrado";
-        else
+        //     if (!$_SESSION['complemento'] = null)
+        //     echo "Não Cadastrado";
+        // else
          echo $_SESSION['complemento'];?> </p>
             
             <p>CEP: <?php 
-            if (!$_SESSION['cep'] = null)
-            echo "Não Cadastrado";
-        else
+        //     if (!$_SESSION['cep'] = null)
+        //     echo "Não Cadastrado";
+        // else
         echo $_SESSION['cep'];?></p>
             <p>Telefone:
-                <?php if (!$_SESSION['telefone'] = null)
-                echo "Não Cadastrado";
-            else
+                <?php //if (!$_SESSION['telefone'] = null)
+                //echo "Não Cadastrado";
+                //else
              echo $_SESSION['telefone'];?>  </p>
 
                         

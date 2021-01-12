@@ -1,3 +1,4 @@
+
 <script src="https://kit.fontawesome.com/9bc643a911.js" crossorigin="anonymous"></script>
 <header class="menu-principal">
     <main>
@@ -54,9 +55,9 @@
                     <div class="dropdown-menu dropdown-menu-right dropdown-default"
                     aria-labelledby="navbarDropdownMenuLink-333" >
                     <a class="dropdown-item" href="login.php">Login</a>
-                    <a class="dropdown-item" href="Perfil.php">Meu Perfil</a>
+                    <a class="dropdown-item" href="perfil.php">Meu Perfil</a>
                     <a class="dropdown-item" href="editprofile.php">Editar Perfil</a>
-                    <a class="dropdown-item" href="https://www.google.com/">sair da conta</a>
+                    <a class="dropdown-item" href="./php/includes/logout.php">sair da conta</a>
                     </div>
                 </li>
             </ul>
