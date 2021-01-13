@@ -13,8 +13,6 @@ include('./php/actions/conexaodb.php');
     $row = mysqli_fetch_assoc($result);
     
 
-
-
 require "./php/includes/menu.php";
 
 
