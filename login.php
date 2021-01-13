@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -103,6 +106,17 @@ integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLP
 
                     <button type= "submit" class="btn btn-second" id="cadastro">cadastro</button>
                 </form>
+
+                <?php
+                    if(isset($_SESSION['cadastrado'])):
+                ?>
+                <div class="bg-success" >
+                    Cadastrado realizado com sucesso!!
+                </div>
+                <?php
+                endif;
+                unset($_SESSION['cadastrado']);
+                ?>
             </div><!-- second column -->
         </div><!-- first content -->
         <div class="content second-content">

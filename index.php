@@ -1,6 +1,6 @@
 <?php
 
-require "./php/includes/menu.html";
+require "./php/includes/menu.php";
 
 ?>
 

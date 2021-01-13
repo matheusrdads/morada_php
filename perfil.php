@@ -1,9 +1,22 @@
 <?php
-
+// session_start();
+// print_r($_SESSION);
 include('./php/includes/verifica_login.php');
+print_r($_SESSION);
+include('./php/actions/conexaodb.php');
+    $email = $_SESSION['email'];
+    
+    $query = "SELECT * FROM usuarios WHERE WHERE email = '$email' ;";
+    $result = mysqli_query($conn, $query);
+
+    print_r($query);
+    $row = mysqli_fetch_assoc($result);
+    
 
 
-require "./php/includes/menu.html";
+
+require "./php/includes/menu.php";
+
 
 ?>
 
@@ -25,7 +38,7 @@ integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLP
         <div class="container-fluid" style="margin-bottom:70px; margin-top:70px;">
             <div class="row">
                 <div class="col-sm border">
-                <h3 class="display-4 text-center"> <?php echo $_SESSION['nome'];?></h3>
+                <h3 class="display-4 text-center"> <?php echo $row['nome'];?></h3>
                     <div class="text-center"><img src="img/icones/profile-icon.png" style="width:200px; height:200px"alt=""></div>
                     <main>  
         <div>
@@ -45,44 +58,46 @@ integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLP
             <h4>Sobre</h4>
             <p><?php echo $_SESSION['sobre'];?>
             </p>
+            <p><?php echo $_SESSION['sobrenome'];?>
+            </p>
 
             <h4>Informações da conta</h4>
             <p>Nome: <?php echo $_SESSION['nome'];?> </p>
             
             <p>Sobrenome: <?php 
-            if (!$_SESSION['sobrenome'] = null)
-                echo "Não Cadastrado";
-            else
+            // if ($_SESSION['sobrenome'] = null)
+            //     echo "Não Cadastrado";
+            // else
                 echo $_SESSION['sobrenome'];?> </p>
             
             <p>Endereço: <?php
-            if (!$_SESSION['endereco'] = null)
-            echo "Não Cadastrado";
-        else
+        //     if (!$_SESSION['endereco'] = null)
+        //     echo "Não Cadastrado";
+        // else
           echo $_SESSION['endereco'];?> </p>
             
             <p>Bairro: <?php 
-            if (!$_SESSION['bairro'] = null)
-                echo "Não Cadastrado";
-            else
+            // if (!$_SESSION['bairro'] = null)
+            //     echo "Não Cadastrado";
+            // else
              echo $_SESSION['bairro'];?>
             </p>
             
             <p>Complemento: <?php
-            if (!$_SESSION['complemento'] = null)
-            echo "Não Cadastrado";
-        else
+        //     if (!$_SESSION['complemento'] = null)
+        //     echo "Não Cadastrado";
+        // else
          echo $_SESSION['complemento'];?> </p>
             
             <p>CEP: <?php 
-            if (!$_SESSION['cep'] = null)
-            echo "Não Cadastrado";
-        else
+        //     if (!$_SESSION['cep'] = null)
+        //     echo "Não Cadastrado";
+        // else
         echo $_SESSION['cep'];?></p>
             <p>Telefone:
-                <?php if (!$_SESSION['telefone'] = null)
-                echo "Não Cadastrado";
-            else
+                <?php //if (!$_SESSION['telefone'] = null)
+                //echo "Não Cadastrado";
+                //else
              echo $_SESSION['telefone'];?>  </p>
 
                         

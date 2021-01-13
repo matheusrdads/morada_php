@@ -3,7 +3,7 @@
     session_start();
     
     if(!$_SESSION['email']) {
-	header('Location: http://localhost/projeto_moradav9/index.php');
+	header('Location: index.php');
     exit();
     }
 ?>
