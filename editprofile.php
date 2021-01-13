@@ -45,7 +45,7 @@ integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLP
 
     <input type="date" class="inpt_date" name = "data_de_nascimento" id="idade"  placeholder="idade">
     <br>
-    <Input class="sobre" type="text"  nome="sobre" placeholder="Sobre">   
+    <input class="sobre" type="text"  name="sobre" placeholder="Sobre">   
     <br>
     <br>
     
