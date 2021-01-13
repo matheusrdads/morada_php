@@ -2,17 +2,8 @@
 // session_start();
 // print_r($_SESSION);
 include('./php/includes/verifica_login.php');
-print_r($_SESSION);
-include('./php/actions/conexaodb.php');
-    $email = $_SESSION['email'];
+include('./php/actions/exibeDados.php');
     
-    $query = "SELECT * FROM usuarios WHERE WHERE email = '$email' ;";
-    $result = mysqli_query($conn, $query);
-
-    print_r($query);
-    $row = mysqli_fetch_assoc($result);
-    
-
 require "./php/includes/menu.php";
 
 
@@ -54,49 +45,49 @@ integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLP
             
         </div>               
             <h4>Sobre</h4>
-            <p><?php echo $_SESSION['sobre'];?>
+            <p><?php echo $row['sobre'];?>
             </p>
-            <p><?php echo $_SESSION['sobrenome'];?>
+            <p><?php echo $row['sobrenome'];?>
             </p>
 
             <h4>Informações da conta</h4>
-            <p>Nome: <?php echo $_SESSION['nome'];?> </p>
+            <p>Nome: <?php echo $row['nome'];?> </p>
             
             <p>Sobrenome: <?php 
             // if ($_SESSION['sobrenome'] = null)
             //     echo "Não Cadastrado";
             // else
-                echo $_SESSION['sobrenome'];?> </p>
+                echo $row['sobrenome'];?> </p>
             
             <p>Endereço: <?php
         //     if (!$_SESSION['endereco'] = null)
         //     echo "Não Cadastrado";
         // else
-          echo $_SESSION['endereco'];?> </p>
+          echo $row['endereco'];?> </p>
             
             <p>Bairro: <?php 
             // if (!$_SESSION['bairro'] = null)
             //     echo "Não Cadastrado";
             // else
-             echo $_SESSION['bairro'];?>
+             echo $row['bairro'];?>
             </p>
             
             <p>Complemento: <?php
         //     if (!$_SESSION['complemento'] = null)
         //     echo "Não Cadastrado";
         // else
-         echo $_SESSION['complemento'];?> </p>
+         echo $row['complemento'];?> </p>
             
             <p>CEP: <?php 
         //     if (!$_SESSION['cep'] = null)
         //     echo "Não Cadastrado";
         // else
-        echo $_SESSION['cep'];?></p>
+        echo $row['cep'];?></p>
             <p>Telefone:
                 <?php //if (!$_SESSION['telefone'] = null)
                 //echo "Não Cadastrado";
                 //else
-             echo $_SESSION['telefone'];?>  </p>
+             echo $row['telefone'];?>  </p>
 
                         
             <!-- Informações para armezanar apenas no banco de dados, não rendenizar no perfil
@@ -111,26 +102,26 @@ integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLP
             <p>Nenhum projeto cadastrado</p>
             
 
-            <form class="form" method="post" action="solicitarservicos.php">
+            <form class="form" method="post" action="./php/actions/postsolicitar_servicos.php">
                 <label for="">
                         <h3 class="display-5">Solicite ajuda</h3>
                     
                         <select name="categoria">
-                        <option value="">Construção</option>
-                        <option value="">Manutenção</option>
+                        <option value="construcao">Construção</option>
+                        <option value="manutencao">Manutenção</option>
                         </select><br><br>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" name="descrição" rows="3" placeholder="Digite aqui a descrição do serviço"></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" name="descricao" rows="3" placeholder="Digite aqui a descrição do serviço"></textarea>
                         <button type="submit" class="btn btn-secondary btn-sm">
                             Enviar
                         </button>
             </form>
-                    <form class="form" method="post" action="oferecerservicos.php">
+                    <form class="form" method="post" action="./php/actions/postoferecer_servicos.php">
                             <h3 class="display-5">Ofereça ajuda</h3>
                                 <select name="categoria">
-                                    <option value="">Construção</option>
-                                    <option value="">Manutenção</option>
+                                    <option value="construcao">Construção</option>
+                                    <option value="manutencao">Manutenção</option>
                                 </select><br><br>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" name="descrição" rows="3" placeholder="Digite aqui a descrição do serviço"></textarea>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" name="descricao" rows="3" placeholder="Digite aqui a descrição do serviço"></textarea>
 
                             <button type="submit" class="btn btn-secondary btn-sm"> Enviar</button>
                 <form>

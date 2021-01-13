@@ -6,7 +6,7 @@ if(isset($_POST['categoria']) && isset($_POST['descricao']) ){
     $categoria = $_POST['categoria'];
     $descricao = $_POST['descricao'];
 
-    $sql = "INSERT into solicitar_servicos (categoria, descricao) values ('$categoria', '$descricao');";
+    $sql = "INSERT INTO `solicitar_servicos`( `categoria`, `descricao`) VALUES ( '$categoria','$descricao' )";
     $result = $conn->query($sql);
 
     if ($result){
