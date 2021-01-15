@@ -12,7 +12,7 @@ require "./php/includes/menu.php";
     <title>Morada Sobre</title>
 
     <!--css-->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/sobre.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
 integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -22,9 +22,74 @@ integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLP
     <!--icones-->
     <link rel="icon" href="img/topcasaicon.png">
 </head>
-<body style="background: background: rgb(255,255,255);
-background: linear-gradient(180deg, rgba(255,255,255,1) 34%, rgba(0,123,255,1) 71%);">
-    <main class="container-fluid text-center ">
+
+
+
+
+
+
+
+
+
+
+
+
+<body style="background: grey">
+
+<div id="parallax-img"></div>
+   
+        <div class="bg-text">
+            <h1 class="text-about"> NOSSA MISSÃO</h1>
+            <p class="text-description">
+                Somos uma organização que visa desenvolver o desenvolvimento individual e coletivo de pessoas em situação insultentável de moradia. 
+                Estamos dispostos a melhorar neste processo moradias em situação de risco, pequenos reparos em toda parte de uma residência. Sempre utilizando
+                métodos construtivos que irão efetivamente reparar um problema e mudar as condições de bem estar dessas pessoas, realizando assim com eficiência e respeito
+                obras rapidas e competentes com o máximo de supervisão que podemos oferecer e colhendo o feedback das pessoas assistidas, afim de manter uma melhora contínua. 
+    </p>
+        </div>
+
+    
+
+
+<!-- <div class="container">
+    <p>
+    Somos uma organização que visa desenvolver o desenvolvimento individual e coletivo de pessoas em situação insultentável de moradia. 
+                Estamos dispostos a melhorar Nesse processo moradias em situação de risco, pequenos reparos em toda parte de uma residência sempre utilizando
+                metodos construtivos que iram efetivamente reparar um proplema e mudar as condições de bem star dessas pessoas, realizando assim com eficiência e respeito
+                obras rapidas e competentes com o máximo de supervisão que podemos oferecer e colhendo o feedback das pessoas assistidas, afim de manter uma melhora conínua. 
+    </p>
+
+</div> -->
+
+
+<div id="parallax-img2"></div>
+        <div class="bg-text2">
+            <h1 class="text-about"> NOSSOS VALORES </h1>
+            <p class="text-description">
+                Nossos valores e ideais são paltados no trabalho voluntário, onde o indivíduo se sensibiliza com a causa do próximo e entra em movimento para prover uma mudança 
+                na realidade de seu próximo, seja com doações de materias, ferramentas, mão de obra e trasporte de materias 
+            </p>
+
+        </div>
+
+    
+
+
+<!-- <div class="container">
+    <p>
+    Nossos valores e ideais são paltados no trabalho voluntário, onde o indivíduo se sensibiliza com a causa do próximo e entra em movimento para prover uma mudança 
+                na realidade de seu próximo, seja com doações de materias, ferramentas, mão de obra e trasporte de materias 
+    </p>
+
+</div> -->
+
+
+
+
+
+
+
+    <!-- <main class="container-fluid text-center ">
 
 
         <div class="row  mt-5" >
@@ -57,7 +122,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 34%, rgba(0,123,255,1) 7
             
         </div>
 
-    </main>
+    </main> -->
 
    <!-- Footer -->
 <?php
