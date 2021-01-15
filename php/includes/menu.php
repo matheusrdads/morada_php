@@ -39,7 +39,7 @@
                     <a class="nav-link  text-white" href="index.php#servicos">Serviços</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  text-white" href="index.php#servicos">Projetos</a>
+                    <a class="nav-link  text-white" href="index.php#servicos">Mural</a>
                 </li>
                 
             </ul>
