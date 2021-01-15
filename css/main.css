@@ -56,8 +56,8 @@ button.slick-next{
     margin: 0 auto;
     width: 50%;
     position: absolute;
-    left: 48%;
-    top: 600px;
+    left: 45%;
+    top: 950px;
     position: absolute;
 
 }
@@ -79,3 +79,4 @@ li.slick-active button {
     background: #00bac6;
 
 }
+

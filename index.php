@@ -34,7 +34,6 @@ integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLP
                 <img src="img/carroselprincipal/banner3.png" />
                 <img src="img/carroselprincipal/banner5.jpg" />
                 <img src="img/carroselprincipal/banner4.jpg" />
-
             </div>
         </div>
 
@@ -46,8 +45,8 @@ background: linear-gradient(180deg, rgba(255,255,255,0.5690651260504201) 24%, rg
                     <h2 class="display-2">Sobre</h2>
                     <p class="lead">Nós acreditamos que todas as pessoas tem direito a moradias seguras, dignas e em bom estado, e pensando nisso queremos te
                         ajudar a transformar o seu lar. 
-                        Morada te ajuda a terminar aquela obra parada em casa, fazer pequenas reformas e realizar manutenções de forma rápida, 
-                        a preços populares e até mesmo <em>gratuitamente</em> através do aluguel e doação de ferramentas e serviços.
+                        Morada te ajuda a terminar aquela obra parada em casa, fazer pequenas reformas e realizar manutenções de forma rápida 
+                        e <em>gratuita</em> da doação de ferramentas e serviços voluntários.
                     Faça parte da iniciativa Morada você também e leve felicidade a sua região. </p>
                     <input">
             </div>
@@ -57,16 +56,16 @@ background: linear-gradient(180deg, rgba(255,255,255,0.5690651260504201) 24%, rg
                     <h2 class="display-2">Faça parte da Morada</h2>
                     <p class="lead">Tá com aquela caixa de ferramenta parada em casa, ou algum resto de obra? É um prestador de serviços com um grande coração
                         e muita vontade de ajudar o mundo a ser um lugar melhor? Sabia que alguém na sua rua pode estar só esperando por você pra tornar a casa em um verdadeiro lar?
-                        Ofereça aqui na Morada! </p>
+                        Ofereça <em>Ajuda</em> aqui na Morada! </p>
                 </div>
         
 
         <!--sessão de serviços AJUSTAR O TEXT-ALIGN DO P PARA CENTER-->
             <div class="container" style="margin-bottom:70px; margin-top:70px">
                 <a name="servicos" id="servicos"></a>
-                <h2 class="display-2">Serviços que oferecemos:</h2>
-                    <p class="lead">Você poderá encontrar empréstimo de todo tipo de ferramentas, serviços gratuitos
-                        e a preços populares.<br>
+                <h2 class="display-2">Ajuda disponivel</h2>
+                    <p class="lead">Você poderá encontrar empréstimos e doações de todo tipo de ferramentas e serviços voluntário.
+                    <br>
                         Comece escolhendo uma categoria:
                     </p>
             </div>
@@ -88,65 +87,63 @@ background: linear-gradient(180deg, rgba(255,255,255,0.5690651260504201) 24%, rg
 
             </div>
         </div>
-        
-            
-
-        <!--sessão de empresa amiga-->
-            <div class="container" style="margin-bottom:70px; margin-top:70px">
-
-                    <h3 class="display-4">Empresa Amiga</h3>
-                    <p class="lead">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-                        in some form, by injected humour</p>
-
-            </div>
-
-        
+         
         <div class="container-fluid" style="margin-bottom:70px; margin-top:70px;    ">
-            <h3 class="display-4">PROJETOS</h3>
+            <h3 class="display-4">MURAL</h3>
             <div class="row">
-                <div class="col-sm">
-                    <img src="img/projetos/troca.png" style="width:300px; height:180px" alt="">
-                        <p> Bazar de Trocas</p>
+                <div class="col-sm-4">
+                <div class="jumbotron">
+                <div class="container">
+                <h3 class="display-7">João Pedro</h3>
+                    <p>Oi pessoal sou carpinteiro e posso ajudar com serviços leves, mandar descrição por favor, fui...</p>
+                    <p class="lead">Vista Alegre.</p>
+                </div>
+            </div>
         </div>
 
 
-            <div class="col-sm">
-            <img src="img/projetos/crianca.jpg" style="width:250px; height:180px" alt="">
-                    <p> Feirão de Brinquedos</p> 
+            <div class="col-sm-4">
+                <div class="jumbotron">
+                <div class="container">
+                <h3 class="display-7">Ana Furtado</h3>
+                    <p>Olá a todos preciso de doação de material de pintura pode ser usado mesmo, Obrigado a todos.</p>
+                    <p class="lead">BelfordRoxo.</p>
+                </div>
+            </div>
             </div>
 
 
-            <div class="col-sm">
-            <img src="./img/projetos/papai-noel.jpg" style="width:250px; height:180px"alt="">
-                    <p> Feira Natalina</p>  
+            <div class="col-sm-4">
+            <div class="jumbotron">
+                <div class="container">
+                <h3 class="display-7">Janaína</h3>
+                    <p>Alguém tem sobra madeira de alguma obra? Poderia ser sarrafos mesmo. </p>
+                    <p class="lead">Duque de caxias</p>
+                </div>
+            </div>  
             </div>
 
             </div>
-            <button type="button" class="btn btn-secondary btn-lg"> <a href="projetos.php">Conheça nossos projetos</a></button>
+            <button type="button" class="btn btn-secondary btn-lg"> <a href="projetos.php">Veja mais</a></button>
         </div>
-        
-        </div>
+ 
+<div class="row-12 align-content-center">
+    <div class="card bg-muted  w-25" >
+      <div class="card-body">
+        <h5 class="card-title">Empresas Parceiras</h5>
+        <p class="card-text">Tem uma empresa e deseja colaborar, seja bem vindo(a).</p>
+        <a href="#" class="btn btn-primary">Saiba mais</a>
+      </div>
+    </div>
+    </div>
 
-            <div class="container " style=" margin-top:70px ">
-            <h3 class="display-4" style="margin-bottom:70px; margin-top:70px" >EMPRESAS PARCEIRAS</h3>
+ 
+
+        </div>
+           
             <div class="row">
-            <div class="col-sm">
-            <img alt="logo" title="logo" src="img/C&C_logo.JPG" width="150px" />
-            </div>
-
-
-            <div class="col-sm">
-            <img alt="logo" title="logo" src="img/C&C_logo.JPG" width="150px" />
-            </div>
-
-
-            <div class="col-sm">
-            <img alt="logo" title="logo" src="img/C&C_logo.JPG" width="150px" />
-            </div>
-
             </div>
         </div>
-
         </div>
 
         
