@@ -1,15 +1,20 @@
 <?php
+session_start();
 
 require_once "conexaodb.php";
+require "exibeDados.php";
+
+$id = $row['idusuario'];
 
 if(isset($_POST['categoria']) && isset($_POST['descricao']) ){
     $categoria = $_POST['categoria'];
     $descricao = $_POST['descricao'];
 
-    $sql = "INSERT INTO `solicitar_servicos`( `categoria`, `descricao`) VALUES ( '$categoria','$descricao' )";
-    $result = $conn->query($sql);
+    $sql = "INSERT INTO `servicos`( `idusuario`, `tipo`, `categoria`, `descricao` ) VALUES ( '$id', 'solicitando', '$categoria', '$descricao' )";
+    $resultado = $conn->query($sql);
 
-    if ($result){
+    if ($resultado){
+        echo "<script>alert('Solicitação feita com sucesso!');</script>";
         header("Location: ../../servicos.php");
     }
     else {
@@ -17,4 +22,5 @@ if(isset($_POST['categoria']) && isset($_POST['descricao']) ){
     }
     };
 
+    
 ?>

@@ -1,15 +1,19 @@
 <?php
+session_start();
 
 require_once "conexaodb.php";
+require "exibeDados.php";
+
+$id = $row['idusuario'];
 
 if(isset($_POST['categoria']) && isset($_POST['descricao']) ){
     $categoria = $_POST['categoria'];
     $descricao = $_POST['descricao'];
 
-    $sql = "INSERT INTO `oferecer_servicos`( `categoria`, `descricao`) VALUES ( '$categoria','$descricao' )";
-    $result = $conn->query($sql);
+    $sql = "INSERT INTO `servicos`( `idusuario`, `tipo`, `categoria`, `descricao` ) VALUES ( '$id', 'oferecendo', '$categoria', '$descricao' )";
+    $resultado = $conn->query($sql);
 
-    if ($result){
+    if ($resultado){
         header("Location: ../../servicos.php");
     }
     else {

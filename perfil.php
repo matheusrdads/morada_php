@@ -47,8 +47,6 @@ integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLP
             <h4>Sobre</h4>
             <p><?php echo $row['sobre'];?>
             </p>
-            <p><?php echo $row['sobrenome'];?>
-            </p>
 
             <h4>Informações da conta</h4>
             <p>Nome: <?php echo $row['nome'];?> </p>
