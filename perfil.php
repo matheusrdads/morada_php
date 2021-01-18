@@ -1,8 +1,9 @@
 <?php
 // session_start();
 // print_r($_SESSION);
+include('./php/actions/conexaodb.php');
 include('./php/includes/verifica_login.php');
-//include('./php/actions/exibeDados.php');
+include('./php/actions/exibeDados.php');
 include('./php/actions/exibeServicos.php');
     
 require "./php/includes/menu.php";
@@ -131,10 +132,29 @@ integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLP
              <h4>Meu Mural</h4>
 
             <p>Serviços:</p>
-            <?php echo $service['tipo'];?><br>
-            <?php echo $service['categoria'];?><br>
-            <?php echo $service['descricao'];?><br>
+            <?php //echo $service['tipo'];?><br>
+            <?php //echo $service['categoria'];?><br>
+            <?php //echo $service['descricao'];?><br>
+           <?php 
+            if ($result = $conn->query($query)) {
+
+                /* fetch associative array */
+                while ($row = $result->fetch_assoc()) {
+                    
+                    echo $row['nome'];
+                    echo '</br>';
+                    echo $row['categoria'];
+                    echo '</br>';
+                    echo $row['descricao'];
+                    
+                    echo '</br>';
+                    echo '</br>';
+
+                }
+            
+            }
            
+           ?>
             </div>
 
             </div>
