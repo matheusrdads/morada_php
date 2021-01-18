@@ -12,7 +12,7 @@
 $email = mysqli_real_escape_string($conn, $_POST['email']);
 $senha = mysqli_real_escape_string($conn, $_POST['senha']);
  
-$query = "SELECT idusuario, email, nome, sobre, sobrenome, endereco, cep, bairro, complemento, telefone FROM `usuarios` WHERE email='{$email}' and senha = md5('{$senha}')";
+$query = "SELECT * FROM `usuarios` WHERE email='{$email}' and senha = md5('{$senha}')";
  
 $result = mysqli_query($conn, $query);
 
@@ -31,6 +31,7 @@ if($result->num_rows > 0){
        $telefone = $rows['telefone'];
 
     }}
+    
 $row = mysqli_num_rows($result);
 
 
@@ -47,8 +48,10 @@ if($row == 1) {
     $_SESSION['complemento'] = $complemento;
     $_SESSION['telefone'] = $telefone;
     header('Location: ../../perfil.php');
-	exit();
+    
 } 
+
+
 
 else {
     $_SESSION['nao_autenticado'] = true;
