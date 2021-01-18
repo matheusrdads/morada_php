@@ -2,7 +2,8 @@
 // session_start();
 // print_r($_SESSION);
 include('./php/includes/verifica_login.php');
-include('./php/actions/exibeDados.php');
+//include('./php/actions/exibeDados.php');
+include('./php/actions/exibeServicos.php');
     
 require "./php/includes/menu.php";
 
@@ -27,7 +28,7 @@ integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLP
         <div class="container-fluid" style="margin-bottom:70px; margin-top:70px;">
             <div class="row">
                 <div class="col-sm border">
-                <h3 class="display-4 text-center"> <?php echo $row['nome'];?></h3>
+                <h3 class="display-4 text-center"> <?php echo $data['nome'];?></h3>
                     <div class="text-center"><img src="img/icones/profile-icon.png" style="width:200px; height:200px"alt=""></div>
                     <main>  
         <div>
@@ -45,47 +46,47 @@ integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLP
             
         </div>               
             <h4>Sobre</h4>
-            <p><?php echo $row['sobre'];?>
+            <p><?php echo $data['sobre'];?>
             </p>
 
             <h4>Informações da conta</h4>
-            <p>Nome: <?php echo $row['nome'];?> </p>
+            <p>Nome: <?php echo $data['nome'];?> </p>
             
             <p>Sobrenome: <?php 
             // if ($_SESSION['sobrenome'] = null)
             //     echo "Não Cadastrado";
             // else
-                echo $row['sobrenome'];?> </p>
+                echo $data['sobrenome'];?> </p>
             
             <p>Endereço: <?php
         //     if (!$_SESSION['endereco'] = null)
         //     echo "Não Cadastrado";
         // else
-          echo $row['endereco'];?> </p>
+          echo $data['endereco'];?> </p>
             
             <p>Bairro: <?php 
             // if (!$_SESSION['bairro'] = null)
             //     echo "Não Cadastrado";
             // else
-             echo $row['bairro'];?>
+             echo $data['bairro'];?>
             </p>
             
             <p>Complemento: <?php
         //     if (!$_SESSION['complemento'] = null)
         //     echo "Não Cadastrado";
         // else
-         echo $row['complemento'];?> </p>
+         echo $data['complemento'];?> </p>
             
             <p>CEP: <?php 
         //     if (!$_SESSION['cep'] = null)
         //     echo "Não Cadastrado";
         // else
-        echo $row['cep'];?></p>
+        echo $data['cep'];?></p>
             <p>Telefone:
                 <?php //if (!$_SESSION['telefone'] = null)
                 //echo "Não Cadastrado";
                 //else
-             echo $row['telefone'];?>  </p>
+             echo $data['telefone'];?>  </p>
 
                         
             <!-- Informações para armezanar apenas no banco de dados, não rendenizar no perfil
@@ -127,9 +128,12 @@ integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLP
                
 
             <div class="col-sm border">
-             <h4>Proximos Eventos</h4>
+             <h4>Meu Mural</h4>
 
-            <p>Sem eventos cadastrados.</p>
+            <p>Serviços:</p>
+            <?php echo $service['tipo'];?><br>
+            <?php echo $service['categoria'];?><br>
+            <?php echo $service['descricao'];?><br>
            
             </div>
 
