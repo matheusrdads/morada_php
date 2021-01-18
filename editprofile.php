@@ -28,7 +28,7 @@ integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLP
 <form method="post" action="./php/actions/posteditprofile.php">
     <div class="form-group">
 
-    <input type="text" class="inpt" name = "nome" id="nome"  placeholder="Nome">
+    <input type="text" class="inpt" name = "nome" id="nome"  placeholder="Nome" value="josé">
 
     <input type="text" class="inpt" name = "sobrenome" id="sobrenome"  placeholder="Sobrenome">
 
