@@ -80,27 +80,27 @@ require "./php/includes/menu.php";
             
             <div class="jumbotron mt-5 mb-5" >
             <h1 class="display-4 text-center mb-5 titulo">Contato</h1>
-                <form method="post" action="./php/actions/postcontato.php">
+                <form method="post" action="./php/actions/postcontato_empresa.php">
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col">
                                 
-                                <label for="nome">Empresa</label>
+                                <label for="empresa">Empresa</label>
                                 
-                                <input type="text" name="nome" class="form-control formulario" placeholder="">
+                                <input type="text" name="empresa" class="form-control formulario" placeholder="" required>
                                 <div class="form-border"></div>
                             </div>
                             <div class="col">
                                 <label for="email">Email</label>
-                                <input type="email" class="form-control formulario"  name="email" placeholder="">
+                                <input type="email" class="form-control formulario"  name="email" placeholder="" required>
                                 <div class="form-border"></div>
                             </div>
                         </div>
                     </div>
                 
                     <div class="form-group ">
-                        <label for="exampleFormControlTextarea1">Mensagem</label>
-                        <textarea class="ml-2 form-control formulario" id="exampleFormControlTextarea1" name="mensagem" rows="3"></textarea>
+                        <label for="mensagem">Mensagem</label>
+                        <textarea class="ml-2 form-control formulario" id="exampleFormControlTextarea1" name="mensagem" rows="3" required></textarea>
                         <div class="form-border"></div>
                     </div>
                     <button type="submit" class="btn btn-primary btn-block submitbtn">Enviar</button>
