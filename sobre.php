@@ -21,110 +21,126 @@ integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLP
     
     <!--icones-->
     <link rel="icon" href="img/topcasaicon.png">
+
+    <!--css scrollbar-->
+    <style>
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #222222; 
+        /* box-shadow: inset 0 0 5px rgb(148, 225, 255);  */
+        /* border-radius: 10px; */
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: rgb(23, 86, 204); 
+        border-radius: 10px;
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #ff7300; 
+      }
+
+      @media screen and (max-width:1000px){
+    .response{
+        width: 550px;
+        height: 600px;
+    }
+}
+
+
+@media screen and (max-width:780px){
+    .response{
+        width: 600px;
+        height: 680px;
+    }
+}
+
+@media screen and (max-width:580px){
+    .response{
+        width: 450px;
+        height: 780px;
+    }
+
+    .display-3 {
+      font-size: 40px;
+    }
+
+    h3{
+      font-size:25px;
+    }
+}
+
+
+    @media screen and (max-width:400px){
+    .response{
+        width: 380px;
+        height: 750px;
+        font-weight: normal;
+    }
+}
+    </style>
 </head>
 
 
+<body>
 
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class=" w-100 response" src="./img/sobre/background.jpg" alt="First slide">
 
-
-
-
-
-
-
-
-
-<body style="background: grey">
-
-<div id="parallax-img"></div>
-   
-        <div class="bg-text">
-            <h1 class="text-about"> NOSSA MISSÃO</h1>
-            <p class="text-description">
-                Somos uma organização que visa desenvolver o desenvolvimento individual e coletivo de pessoas em situação insultentável de moradia. 
-                Estamos dispostos a melhorar neste processo moradias em situação de risco, pequenos reparos em toda parte de uma residência. Sempre utilizando
-                métodos construtivos que irão efetivamente reparar um problema e mudar as condições de bem estar dessas pessoas, realizando assim com eficiência e respeito
-                obras rapidas e competentes com o máximo de supervisão que podemos oferecer e colhendo o feedback das pessoas assistidas, afim de manter uma melhora contínua. 
-    </p>
+      <div class="container bg-text ">
+            <h3 class="display-3 text-about"> NOSSA MISSÃO</h1>
+              <h3>
+                <small>
+                    Somos uma organização que visa desenvolver o desenvolvimento individual
+                    e coletivo de pessoas em situação insultentável de moradia. 
+                    Estamos dispostos a melhorar neste processo moradias em situação de risco,
+                    pequenos reparos em toda parte de uma residência. Sempre utilizando
+                    métodos construtivos que irão efetivamente reparar um problema e mudar as 
+                    condições de bem estar dessas pessoas, realizando assim com eficiência e respeito
+                    obras rapidas e competentes com o máximo de supervisão que podemos oferecer
+                    e colhendo o feedback das pessoas assistidas, afim de manter uma melhora contínua. 
+                </small>
+              </h3>
         </div>
+    </div>
+    <div class="carousel-item">
+      <img class=" w-100 response" src="./img/sobre/background2.jpg" alt="Second slide">
+      <div class="container bg-text ">
+            <h1 class="display-3 text-about"> NOSSOS VALORES </h1>
+            <h3>
+                <small>
+                    Nossos valores e ideais são paltados no trabalho voluntário, 
+                    onde o indivíduo se sensibiliza com a causa do próximo e 
+                    entra em movimento para prover uma mudança 
+                    na realidade de seu próximo, seja com doações de materias,
+                    ferramentas, mão de obra e trasporte de materias 
+                </small>
+                </h3>
+        </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 
     
 
 
-<!-- <div class="container">
-    <p>
-    Somos uma organização que visa desenvolver o desenvolvimento individual e coletivo de pessoas em situação insultentável de moradia. 
-                Estamos dispostos a melhorar Nesse processo moradias em situação de risco, pequenos reparos em toda parte de uma residência sempre utilizando
-                metodos construtivos que iram efetivamente reparar um proplema e mudar as condições de bem star dessas pessoas, realizando assim com eficiência e respeito
-                obras rapidas e competentes com o máximo de supervisão que podemos oferecer e colhendo o feedback das pessoas assistidas, afim de manter uma melhora conínua. 
-    </p>
 
-</div> -->
-
-
-<div id="parallax-img2"></div>
-        <div class="bg-text2">
-            <h1 class="text-about"> NOSSOS VALORES </h1>
-            <p class="text-description">
-                Nossos valores e ideais são paltados no trabalho voluntário, onde o indivíduo se sensibiliza com a causa do próximo e entra em movimento para prover uma mudança 
-                na realidade de seu próximo, seja com doações de materias, ferramentas, mão de obra e trasporte de materias 
-            </p>
-
-        </div>
-
-    
-
-
-<!-- <div class="container">
-    <p>
-    Nossos valores e ideais são paltados no trabalho voluntário, onde o indivíduo se sensibiliza com a causa do próximo e entra em movimento para prover uma mudança 
-                na realidade de seu próximo, seja com doações de materias, ferramentas, mão de obra e trasporte de materias 
-    </p>
-
-</div> -->
-
-
-
-
-
-
-
-    <!-- <main class="container-fluid text-center ">
-
-
-        <div class="row  mt-5" >
-            <div class="col ">
-                <h2 class="display-2">Nossa Missão</h2>
-                
-                <p class="lead">Somos uma organização que visa desenvolver o desenvolvimento individual e coletivo de pessoas em situação insultentável de moradia. 
-                Estamos dispostos a melhorar Nesse processo moradias em situação de risco, pequenos reparos em toda parte de uma residência sempre utilizando
-                metodos construtivos que iram efetivamente reparar um proplema e mudar as condições de bem star dessas pessoas, realizando assim com eficiência e respeito
-                obras rapidas e competentes com o máximo de supervisão que podemos oferecer e colhendo o feedback das pessoas assistidas, afim de manter uma melhora conínua.</p>
-            </div>
-            <div class="col">
-                <div><img src="img/sobre/sobre1.jpg"alt="" class="img-fluid"></div>
-            </div>
-            
-        </div>
-
-
-
-        <div class="row  mt-5 mb-5 ">
-            <div class="col ">
-                <div><img src="img/sobre/sobre2.jpg" alt="" class="img-fluid"></div>
-            </div>
-            <div class="col">
-                <h2 class="display-2">Nossos Valores</h2>
-                
-                <p class="lead">Nossos valores e ideais são paltados no trabalho voluntário, onde o indivíduo se sensibiliza com a causa do próximo e entra em movimento para prover uma mudança 
-                na realidade de seu próximo, seja com doações de materias, ferramentas, mão de obra e trasporte de materias.</p>
-            </div>
-            
-        </div>
-
-    </main> -->
-
-   <!-- Footer -->
 <?php
 
 require "./php/includes/footer.html";

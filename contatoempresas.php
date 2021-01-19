@@ -85,32 +85,19 @@ require "./php/includes/menu.php";
                         <div class="form-row">
                             <div class="col">
                                 
-                                <label for="nome">Nome</label>
+                                <label for="nome">Empresa</label>
                                 
                                 <input type="text" name="nome" class="form-control formulario" placeholder="">
                                 <div class="form-border"></div>
                             </div>
                             <div class="col">
-                                <label for="Sobrenome">Sobrenome</label>
-                                <input type="text" class="form-control formulario"  name="sobrenome" placeholder="">
-                                <div class="form-border"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="form-row">
-                            <div class="col">
                                 <label for="email">Email</label>
-                                <input type="email" class="form-control formulario" name="email" placeholder="">
-                                <div class="form-border"></div>
-                            </div>
-                            <div class="col">
-                                <label for="telefone">Telefone</label>
-                                <input type="number" class="form-control formulario" name="telefone" placeholder="">
+                                <input type="email" class="form-control formulario"  name="email" placeholder="">
                                 <div class="form-border"></div>
                             </div>
                         </div>
                     </div>
+                
                     <div class="form-group ">
                         <label for="exampleFormControlTextarea1">Mensagem</label>
                         <textarea class="ml-2 form-control formulario" id="exampleFormControlTextarea1" name="mensagem" rows="3"></textarea>

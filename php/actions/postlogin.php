@@ -12,7 +12,7 @@
 $email = mysqli_real_escape_string($conn, $_POST['email']);
 $senha = mysqli_real_escape_string($conn, $_POST['senha']);
  
-$query = "SELECT id_usuario, email, nome, sobre, sobrenome, endereco, cep, bairro, complemento, telefone FROM `usuarios` WHERE email='{$email}' and senha = md5('{$senha}')";
+$query = "SELECT * FROM `usuarios` WHERE email='{$email}' and senha = md5('{$senha}')";
  
 $result = mysqli_query($conn, $query);
 
@@ -20,6 +20,7 @@ $result = mysqli_query($conn, $query);
 
 if($result->num_rows > 0){
     while($rows = $result->fetch_assoc()){
+       $id = $rows['idusuario'];
        $nome = $rows['nome'];
        $sobre = $rows['sobre'];
        $sobrenome = $rows['sobrenome'];
@@ -30,11 +31,13 @@ if($result->num_rows > 0){
        $telefone = $rows['telefone'];
 
     }}
+    
 $row = mysqli_num_rows($result);
 
 
 
 if($row == 1) {
+    $_SESSION['idusuario'] = $id;
     $_SESSION['email'] = $email;
     $_SESSION['nome'] = $nome;
     $_SESSION['sobre'] = $sobre;
@@ -45,15 +48,11 @@ if($row == 1) {
     $_SESSION['complemento'] = $complemento;
     $_SESSION['telefone'] = $telefone;
     header('Location: ../../perfil.php');
-	exit();
-} 
-
-else {
+    
+} else {
     $_SESSION['nao_autenticado'] = true;
     
-    echo "<script>alert('Houve um erro ao salvar...');</script>";
-
-    // header('Location:../../index.php');
+    header('Location:../../login.php');
     
 	exit();
 }
