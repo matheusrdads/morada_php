@@ -9,6 +9,7 @@ if(isset($_POST['nome']) && isset($_POST['sobrenome']) && isset($_POST['email'])
     $email = $_POST['email'];
     $telefone = $_POST['telefone'];
     $mensagem = $_POST['mensagem'];
+    
    
     $sql = "INSERT into contato (nome, email, telefone, mensagem, sobrenome) values ('$nome', '$email', '$telefone', '$mensagem', '$sobrenome');";
     $result = $conn->query($sql);

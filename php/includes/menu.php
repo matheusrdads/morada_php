@@ -1,4 +1,18 @@
 
+<link href='https://css.gg/search.css' rel='stylesheet'>
+<style> 
+.style {  
+    text-align: center;
+    border-radius: 30px !important;
+    background-color:transparent !important;
+    border: 1px solid white !important;
+}
+.botao{
+    border:transparent !important;
+    color:white !important;
+}
+
+</style>
 <script src="https://kit.fontawesome.com/9bc643a911.js" crossorigin="anonymous"></script>
 <header class="menu-principal">
     <main>
@@ -36,16 +50,16 @@
                     <a class="nav-link  text-white" href="contato.php">Contato</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  text-white" href="index.php#servicos">Serviços</a>
+                    <a class="nav-link  text-white" href="servicos.php">Serviços</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  text-white" href="index.php#servicos">Mural</a>
+                    <a class="nav-link  text-white" href="projetos.php">Mural</a>
                 </li>
                 
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Go</button>
+                <input class="form-control mr-sm-2 style" type="search" placeholder="Pesquisar">
+                <button class="btn btn-outline-primary botao" type="submit"><i class="gg-search"></i></button>              
             </form>
             <ul class="navbar-nav" >
                 <li class="nav-item dropdown">
@@ -57,7 +71,7 @@
                     <a class="dropdown-item" href="login.php">Login</a>
                     <a class="dropdown-item" href="perfil.php">Meu Perfil</a>
                     <a class="dropdown-item" href="editprofile.php">Editar Perfil</a>
-                    <a class="dropdown-item" href="./php/includes/logout.php">sair da conta</a>
+                    <a class="dropdown-item" href="./php/includes/logout.php">Sair da Conta</a>
                     </div>
                 </li>
             </ul>

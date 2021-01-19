@@ -14,7 +14,28 @@
     <link rel="icon" href="img/logomorada.png">
     <link rel="stylesheet" href="css/servicos.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+    <style>
+        .submitbtn{
+        background: -webkit-linear-gradient(right, #00e0ff, #1145ff);
+        border: none;
+        border-radius: 21px;
+        box-shadow: 0px 1px 8px #1145ff;
+        color: white !important;
+        height: 42.3px;
+        margin: 0 auto;
+        margin-top: 50px;
+        transition: 0.25s;
+        width: 140px;
+    }
 
+    .card{
+
+        border: none;
+    }
+    .submitbtn:hover {
+        box-shadow: 0px 1px 18px #1145ff;
+    }
+    </style>
 </head>
 <body>
     
@@ -23,81 +44,45 @@
     <div class="container text-center">
 
     <!-- banner -->
-    <img class=" imagem-head" src="./img/servicos/servico3.jpg" alt="">
+    <img class=" imagem-head" src="./img/servicos/servico3n.png" style="width: 70%" alt="">
 
     <!-- titulo -->
-        <h1 style="text-align: center;">Principais Serviços</h2>
-        <p><strong>Seja um ajudador oferecendo mão de obra para quem precisa para uma sociedade mais justa oferecendo condições adequada de moradia, venha e faça parte!</strong></p>
-        
+    <div class="container text-center mb-5"  style="width:80%">
+        <h1 class="display-3 pt-5">Principais Serviços</h2>
+        <p class="lead"> Seja um ajudador oferecendo mão de obra para quem precisa para uma sociedade mais justa oferecendo condições adequada de moradia, venha e faça parte!</strong></p>
+        </div>    
 
 
         <div class="card-deck">
             <div class="card">
-                <img class="card-img-top" src="./img/servicos/reforma.jpg" alt="Card image cap">
+                <img class="card-img-top" src="./img/servicos/construcao.jpg" alt="Card image cap">
                 <div class="card-body">
                 <h5 class="card-title">Construção</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text">alvenaria, concretagem, revestimentos, carpintaria, etc.</p>
                 </div>
                 
             </div>
             <div class="card">
-                <img class="card-img-top" src="./img/servicos/reforma.jpg" alt="Card image cap">
+                <img class="card-img-top" src="./img/servicos/pinturacasa.png" style="height:193" alt="Card image cap">
                 <div class="card-body">
         <h5 class="card-title">Manutenção</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text">instalação elétrica, reparos hidráulicos, pinturas, etc</p>
                 </div>
                 
             </div>
             <div class="card">
-                <img class="card-img-top" src="./img/servicos/reforma.jpg" alt="Card image cap">
+            <iframe class="embed-responsive-item" src="https://www.recordtvriopreto.com.br/sistema/video_artigo/43552_3253726141497619971.mp4" allowfullscreen style="height: 190px;"></iframe>
                 <div class="card-body">
-                <h5 class="card-title">Reparos</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <h5 class="card-title">Doações</h5>
+                <p class="card-text">Realize doações de equipamentos e materiais que não utilize mais para ajudar o próximo.</p>
                 </div>
                 
             </div>
             </div>
-
-
-
-
-
-            <!-- sessao servicos -->
-            <!-- <section class="flex">
-            <div>
-                <img class="imagem" src="./img/servicos/reforma.jpg" alt="">
-                <p>Serviço 1</p>
-                <hr>
-                <p class="p-descricao">Descrição do serviço</p>
-                <button class="btn_serv bg-dark text-white">Contratar</button>
-            </div>
-            <div>
-                <img class="imagem" src="./img/servicos/reforma.jpg" alt="">
-                <p>Serviço 2</p>
-                <hr>
-                <p class="p-descricao">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et ipsa impedit sequi, esse aut, voluptate placeat</p>
-                <button class="btn_serv bg-dark text-white">Contratar</button>
-            </div>
-            <div>
-                <img class="imagem" src="./img/servicos/reforma.jpg" alt="">
-                <p>Serviço 3</p>
-                <hr>
-                <p class="p-descricao">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex dolorum sint obcaecati iste magni consecteturgfgrdgrddgrdrggrdgrgdrgdrg </p>
-                <button class="btn_serv bg-dark text-white">Contratar</button>
-            </div>
-            
-        </section> -->
-
-
-
-
-
-
-
 
         <hr>
 
-        <h2 style="text-align: center; margin-top: 20px;">Destaques</h2>
+        <h2 class="display-3 pt-5">Destaques</h2>
 
         <!--Carousel Wrapper-->
         <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
@@ -105,8 +90,8 @@
         <!--Controls-->
         <div class="controls-top">
             <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
-            <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
-                class="fas fa-chevron-right"></i></a>
+            <a class="btn-floating" href="#multi-item-example" data-slide="next"><i  class="fas fa-chevron-right"></i></a>
+               
         </div>
         <!--/.Controls-->
 
@@ -127,12 +112,12 @@
             <div class="col-md-3" style="float:left">
             <div class="card mb-2">
                 <img class="card-img-top"
-                    src="./img/profile.png" alt="Card image cap">
+                    src="./img/icones/profile-icon.png" alt="Card image cap">
                 <div class="card-body">
                     <h4 class="card-title">Luiz Claudio</h4>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
-                    <a class="btn btn-primary">Perfil</a>
+                    <a class="btn submitbtn ">Perfil</a>
                 </div>
                 </div>
             </div>
@@ -140,12 +125,12 @@
             <div class="col-md-3" style="float:left">
                 <div class="card mb-2">
                 <img class="card-img-top"
-                    src="./img/profile.png" alt="Card image cap">
+                    src="./img/icones/profile-icon.png" alt="Card image cap">
                 <div class="card-body">
                     <h4 class="card-title">Atonio Lopes</h4>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
-                    <a class="btn btn-primary">Perfil</a>
+                    <a class="btn submitbtn">Perfil</a>
                 </div>
                 </div>
             </div>
@@ -153,12 +138,12 @@
             <div class="col-md-3" style="float:left">
                 <div class="card mb-2">
                 <img class="card-img-top"
-                    src="./img/profile.png" alt="Card image cap">
+                    src="./img/icones/profile-icon.png" alt="Card image cap">
                 <div class="card-body">
                     <h4 class="card-title">Marcos Antonio</h4>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
-                    <a class="btn btn-primary">Perfil</a>
+                    <a class="btn submitbtn">Perfil</a>
                 </div>
                 </div>
             </div>
@@ -166,12 +151,12 @@
             <div class="col-md-3" style="float:left">
             <div class="card mb-2">
                 <img class="card-img-top"
-                    src="./img/profile.png" alt="Card image cap">
+                    src="./img/icones/profile-icon.png" alt="Card image cap">
                 <div class="card-body">
                     <h4 class="card-title">Julia Nascimento</h4>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
-                    <a class="btn btn-primary">Perfil</a>
+                    <a class="btn submitbtn">Perfil</a>
                 </div>
                 </div>
             </div>
@@ -184,13 +169,12 @@
 
             <div class="col-md-3" style="float:left">
                 <div class="card mb-2">
-                <img class="card-img-top"
-                    src="./img/icones/profile-icon.png" alt="Card image cap">
+                <img class="card-img-top" src="./img/icones/profile-icon.png" alt="Card image cap">
                 <div class="card-body">
                     <h4 class="card-title">Marcos Ferreira</h4>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
-                    <a class="btn btn-primary">Perfil</a>
+                    <a class="btn submitbtn">Perfil</a>
                 </div>
                 </div>
             </div>
@@ -203,7 +187,7 @@
                     <h4 class="card-title">Nathan Pereira</h4>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
-                    <a class="btn btn-primary">Perfil</a>
+                    <a class="btn submitbtn">Perfil</a>
                 </div>
                 </div>
             </div>
@@ -216,7 +200,7 @@
                     <h4 class="card-title">Luiz Henrique</h4>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
-                    <a class="btn btn-primary">Perfil</a>
+                    <a class="btn submitbtn">Perfil</a>
                 </div>
                 </div>
             </div>
@@ -229,97 +213,26 @@
                     <h4 class="card-title">Caio Andrade</h4>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
-                    <a class="btn btn-primary">Perfil</a>
+                    <a class="btn submitbtn">Perfil</a>
                 </div>
                 </div>
             </div>
-
             </div>
-            <!--/.Second slide-->
-
-        
-
+            <!--/.Second slide-->       
         </div>
         <!--/.Slides-->
-
         </div>
         <!--/.Carousel Wrapper-->
-
-
-
-
-        <!-- sessao destaques -->
-        <!-- <h2 style="text-align: center; margin-top: 100px;">Destaques</h2>
-        <section class="flex-2">
-            <div>
-                <img class="perfilimg" src="./img/icones/profile-icon.png" alt="">
-                <hr>
-                <p>Luiz claudio</p>
-                <p>Função</p>
-                <div class="estrelas">
-                    <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
-                    <label for="cm_star-1"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-1" name="fb" value="1"/>
-                    <label for="cm_star-2"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-2" name="fb" value="2"/>
-                    <label for="cm_star-3"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-3" name="fb" value="3"/>
-                    <label for="cm_star-4"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-4" name="fb" value="4"/>
-                    <label for="cm_star-5"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-5" name="fb" value="5"/>
-                </div>
-
-            </div>
-            <div>
-                <img class="perfilimg" src="./img/icones/profile-icon.png" alt="">
-                <hr>
-                <p>Antônio Lopes</p>
-                <p>Função</p>
-                <div class="estrelas">
-                    <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
-                    <label for="cm_star-1"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-1" name="fb" value="1"/>
-                    <label for="cm_star-2"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-2" name="fb" value="2"/>
-                    <label for="cm_star-3"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-3" name="fb" value="3"/>
-                    <label for="cm_star-4"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-4" name="fb" value="4"/>
-                    <label for="cm_star-5"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-5" name="fb" value="5"/>
-                </div>
-            
-            </div>
-            <div>
-                <img class="perfilimg" src="./img/icones/profile-icon.png" alt="">
-                <hr>
-                <p>Julia Nascimento</p>
-                <p>Função</p>
-                <div class="estrelas">
-                    <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
-                    <label for="cm_star-1"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-1" name="fb" value="1"/>
-                    <label for="cm_star-2"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-2" name="fb" value="2"/>
-                    <label for="cm_star-3"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-3" name="fb" value="3"/>
-                    <label for="cm_star-4"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-4" name="fb" value="4"/>
-                    <label for="cm_star-5"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-5" name="fb" value="5"/>
-                </div>
-        </section>  -->
     </div>
         
     
     <!--Footer-->
-    <footer class="container-fluid">
+  
         <?php
             require "./php/includes/footer.html";
         ?>
 
-    </footer>
+    
 
 
 </body>

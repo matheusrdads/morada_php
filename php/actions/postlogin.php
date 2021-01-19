@@ -49,16 +49,12 @@ if($row == 1) {
     $_SESSION['telefone'] = $telefone;
     header('Location: ../../perfil.php');
     
-} 
 
+} else {
 
-
-else {
     $_SESSION['nao_autenticado'] = true;
     
-    echo "<script>alert('Houve um erro ao salvar...');</script>";
-
-    // header('Location:../../index.php');
+    header('Location:../../login.php');
     
 	exit();
 }

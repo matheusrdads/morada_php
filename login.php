@@ -58,7 +58,7 @@ integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLP
             <div class="first-column">
 
             <div>         
-                <img src="img/logomorada.png" width="100px" />
+                <img src="img/logomoradabranco.png" width="100px" />
             </div>
                 <!-- <h2 class="title title-primary">bem vindo de volta!</h2>
                 <p class="description description-primary">continue conectado </p>
@@ -148,6 +148,16 @@ integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLP
                     </ul>
                 </div><!-- social media -->
                 <p class="description description-second">ou use sua conta para entrar:</p>
+                <?php
+            if(isset($_SESSION['nao_autenticado'])):
+            ?>
+            <div class="alert" >
+                <script> alert("Email ou senha incorreto")</script>
+            </div>
+            <?php
+            endif;
+            unset($_SESSION['nao_autenticado']);
+            ?>
                 <form class="form" method="post" action="./php/actions/postlogin.php">
 
                     <label class="label-input" for="email">
@@ -164,6 +174,7 @@ integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLP
                     </a>
                     <button class="btn btn-second" id="login">entre</button>
                 </form>
+                
             </div><!-- second column -->
         </div><!-- second-content -->
     </div>
