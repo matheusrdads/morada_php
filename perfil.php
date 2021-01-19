@@ -124,18 +124,27 @@ integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLP
             
             <p>Bairro: <?php 
             
+            // if ($_SESSION['sobrenome'] = null)
+            //     echo "Não Cadastrado";
+            // else
+                echo $data['sobrenome'];?> </p>
+            
+            <p>Endereço: <?php
+        //     if (!$_SESSION['endereco'] = null)
+        //     echo "Não Cadastrado";
+        // else
+          echo $data['endereco'];?> </p>
+            
+            <p>Bairro: <?php 
+            // if (!$_SESSION['bairro'] = null)
+            //     echo "Não Cadastrado";
+            // else
+
              echo $data['bairro'];?>
             </p>
             
             <p>Complemento: <?php
-       
-         echo $data['complemento'];?> </p>
-            
-            <p>CEP: <?php 
-        
-        echo $data['cep'];?></p>
-            <p>Telefone:
-                <?php 
+
              echo $data['telefone'];?>  </p>
 
                         
@@ -177,13 +186,7 @@ integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLP
             <div class="col-sm border">
              <h4>Meus registros:</h4>
 
-            
-           
-           
             <?php 
-
-            
-            
            
                 $result = $conn->query($query);
                 if ($result->num_rows > 0) {
