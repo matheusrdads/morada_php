@@ -1,3 +1,5 @@
+
+
 function valida_contato() {
     let nome = document.getElementById('nome').value;
     let email = document.getElementById('email').value;

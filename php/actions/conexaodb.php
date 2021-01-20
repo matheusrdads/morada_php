@@ -14,4 +14,6 @@ if (!$conn) {
     die("A conexão do BD falhou" . mysqli_connect_error());
     echo mysqli_connect_error();
 }
+
+
 ?>

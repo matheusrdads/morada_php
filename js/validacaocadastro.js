@@ -1,3 +1,4 @@
+
 function valida_cadastro() {
     let nome = document.getElementById('nome').value;
     let email = document.getElementById('emailcadastro').value;
