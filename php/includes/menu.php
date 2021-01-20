@@ -53,7 +53,7 @@
                     <a class="nav-link  text-white" href="servicos.php">Serviços</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  text-white" href="projetos.php">Mural</a>
+                    <a class="nav-link  text-white" href="mural.php">Mural</a>
                 </li>
                 
             </ul>
@@ -68,7 +68,7 @@
                     <i class="fas fa-user-alt"  style="color: white;"></i>
                     <div class="dropdown-menu dropdown-menu-right dropdown-default"
                     aria-labelledby="navbarDropdownMenuLink-333" >
-                    <a class="dropdown-item" href="login.php">Login</a>
+                    <a class="dropdown-item" href="login.php">Entre</a>
                     <a class="dropdown-item" href="perfil.php">Meu Perfil</a>
                     <a class="dropdown-item" href="editprofile.php">Editar Perfil</a>
                     <a class="dropdown-item" href="./php/includes/logout.php">Sair da Conta</a>

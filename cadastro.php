@@ -13,7 +13,6 @@ require "./php/includes/menu.php";
 
     <!--css-->
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/login.css">
 
     <!-- <link rel="stylesheet" type="text/css" href="css/contato.css"> -->
 
@@ -35,10 +34,19 @@ require "./php/includes/menu.php";
         .formulario {
             background-color: transparent !important;
             border: 2px solid cyan;
-            border-radius: 15px !important;
+            border-radius: 15px;
+
         }
         .formulario:hover {
             border: 2px solid orangered !important;
+        }
+        .jumbotron {
+            margin-left: 8% !important;
+            width: 80% !important;
+            border-radius: 50px !important;
+            background-color: rgba(0, 0, 0, 0.733) !important;
+            box-shadow: 0 0 2em rgb(0, 0, 0) !important;
+
         }
         .submitbtn {
             background: -webkit-linear-gradient(right, #00e0ff, #1145ff);
@@ -52,6 +60,7 @@ require "./php/includes/menu.php";
             transition: 0.25s;
             width: 153px;
         }
+
         .submitbtn:hover {
             box-shadow: 0px 1px 18px #1145ff;
         }
@@ -71,27 +80,37 @@ require "./php/includes/menu.php";
 <body>
     <div class="container">
         <div class="jumbotron mt-5 mb-5">
-            <h1 class="display-4 text-center mb-5 pt-5 text-white">Login</h1>
-            <form class="form text-center" method="post" action="./php/actions/postlogin.php">
+            <h1 class="display-4 text-center mb-5 text-white">Cadastro</h1>
+            <form class="form" method="post" action="./php/actions/postcadastro.php">
                 <div class="form-group">
                     <div class="form-row">
                         <div class="col">
-                            <input type="email" class="form-control formulario" name="email" id="email" onkeyup="valida_login()" placeholder="E-mail">
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-row">
-                        <div class="col">
-                            <input type="password" class="form-control formulario" id="senha" name="senha" onkeyup="valida_login()" placeholder="Senha">
+                            <input type="text" class="form-control formulario" name="nome" id="nome" onkeyup="valida_cadastro()" placeholder="Nome">
                             <div class="form-border"></div>
                         </div>
                     </div>
                 </div>
-                <a href="./cadastro.php">Não tem uma conta? Crie uma agora mesmo! </a>
-                <button type="submit" class="btn btn-primary btn-block submitbtn" id="login">Entrar</button>
-            </form>
 
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="email" class="form-control formulario" name="email" id="emailcadastro" onkeyup="valida_cadastro()" placeholder="E-mail">
+                            <div class="form-border"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col">
+
+                            <input type="password" class="form-control formulario" name="senha" id="senhacadastro" onkeyup="valida_cadastro()" placeholder="Senha">
+                            <div class="form-border"></div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block submitbtn">Entrar</button>
+            </form>
             <?php
             if (isset($_SESSION['cadastrado'])) :
             ?>

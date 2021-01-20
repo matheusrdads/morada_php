@@ -28,39 +28,31 @@ require "./php/includes/menu.php";
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <style>
-    
     body{
         background: rgb(65,255,250)!important;
         background: linear-gradient(180deg, rgba(65,255,250,1) 0%, rgba(0,73,255,1) 91%)!important;
-    }
-  
+    } 
     .formulario{
         background-color: transparent !important;
-        border: 0;
-        
+        border: 0;       
     }
-
     .jumbotron{
         margin-left: 8%;
         width: 80%;
         border-radius: 50px;
         background-color: white !important;
-        box-shadow: 0 0 2em black;
-        
+        box-shadow: 0 0 2em black;   
     }
-
     .form-border {
         background: -webkit-linear-gradient(right, #a6fffd, #0074ff);
         height: 1px;
         width: 100%;
 }
-
- 
     .submitbtn{
         background: -webkit-linear-gradient(right, #00e0ff, #1145ff);
         border: none;
         border-radius: 21px;
-        box-shadow: 0px 1px 8px ##1145ff;
+        box-shadow: 0px 1px 8px #1145ff;
         color: white;
         height: 42.3px;
         margin: 0 auto;
@@ -68,26 +60,21 @@ require "./php/includes/menu.php";
         transition: 0.25s;
         width: 153px;
     }
-
     .submitbtn:hover {
         box-shadow: 0px 1px 18px #1145ff;
     }
     </style>
     </head>
-
     <body>
-        <div class="container" >
-            
+        <div class="container">           
             <div class="jumbotron mt-5 mb-5" >
             <h1 class="display-4 text-center mb-5 titulo">Contato</h1>
-                <form method="post" action="./php/actions/postcontato.php">
+                <form method="post" action="./php/actions/postcontato_empresa.php">
                     <div class="form-group">
                         <div class="form-row">
-                            <div class="col">
-                                
-                                <label for="nome">Empresa</label>
-                                
-                                <input type="text" name="nome" class="form-control formulario" placeholder="">
+                            <div class="col">                              
+                                <label for="nome">Empresa</label>                             
+                                <input type="text" name="empresa" class="form-control formulario" placeholder="">
                                 <div class="form-border"></div>
                             </div>
                             <div class="col">
@@ -96,18 +83,15 @@ require "./php/includes/menu.php";
                                 <div class="form-border"></div>
                             </div>
                         </div>
-                    </div>
-                
+                    </div>               
                     <div class="form-group ">
                         <label for="exampleFormControlTextarea1">Mensagem</label>
                         <textarea class="ml-2 form-control formulario" id="exampleFormControlTextarea1" name="mensagem" rows="3"></textarea>
                         <div class="form-border"></div>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block submitbtn">Enviar</button>
-                    
+                    <button type="submit" class="btn btn-primary btn-block submitbtn">Enviar</button>                  
                 </form>
-            </div>
-        
+            </div>       
         </div>
         <?php
         require "./php/includes/footer.html";

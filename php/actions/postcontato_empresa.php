@@ -2,18 +2,18 @@
 
 require_once "conexaodb.php";
 
-if(isset($_POST['nome']) && isset($_POST['sobrenome']) && isset($_POST['email']) && isset($_POST['telefone']) && isset($_POST['mensagem']) ){
+if(isset($_POST['empresa']) && isset($_POST['email']) && isset($_POST['mensagem']) ){
 
-    $nome = $_POST['nome'];
-    $sobrenome = $_POST['sobrenome'];
+    $empresa = $_POST['empresa'];
     $email = $_POST['email'];
-    $telefone = $_POST['telefone'];
     $mensagem = $_POST['mensagem'];
     
    
-    $sql = "INSERT into contato (nome, email, telefone, mensagem, sobrenome) values ('$nome', '$email', '$telefone', '$mensagem', '$sobrenome');";
+    $sql = "INSERT into `contato` (`empresa`, `email`, `mensagem`) values ('$empresa',' $email', '$mensagem');";
+    
     $result = $conn->query($sql);
 
+    var_dump($result);
     
     if ($result){
        echo "<script>alert('Mensagem enviada com sucesso!');</script>";

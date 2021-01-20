@@ -1,7 +1,5 @@
 <?php
-
 require "./php/includes/menu.php";
-
 ?>
 
 <!DOCTYPE html>
@@ -25,12 +23,10 @@ require "./php/includes/menu.php";
         body {
             background: rgb(240, 249, 255);
         }
-
         .bg-light {
-            background: rgb(0,138,255);
-            background: linear-gradient(180deg, rgba(0,138,255,1) 0%, rgba(142,71,255,1) 90%);
+            background: rgb(0, 138, 255);
+            background: linear-gradient(180deg, rgba(0, 138, 255, 1) 0%, rgba(142, 71, 255, 1) 90%);
         }
-
         .jumbotron {
             border: 2px solid #fff;
             background: url(img/duck.png) no-repeat;
@@ -41,27 +37,23 @@ require "./php/includes/menu.php";
             -webkit-border-radius: 30px !important;
             border-radius: 30px !important;
         }
-
-        .tamanho{
-            position:static;
+        .tamanho {
+            position: static;
         }
-
-        .rounded-circle{
+        .rounded-circle {
             border: 5px solid white;
         }
-
-        *{
+        * {
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
         }
 
-    
-        .btnhover{        
+        .btnhover {
             width: 200px;
             font-size: 16px;
             color: #fff;
-            text-align:center;
+            text-align: center;
             border: none;
             background-size: 300% 100%;
             border-radius: 50px;
@@ -70,49 +62,38 @@ require "./php/includes/menu.php";
             -webkit-transition: all .4s ease-in-out;
             transition: all .4s ease-in-out;
         }
-
-        .btnhover:hover{
-            color:#fff;
+        .btnhover:hover {
+            color: #fff;
             background-position: 100% 0;
             moz-transition: all .4s ease-in-out;
             -o-transition: all .4s ease-in-out;
             -webkit-transition: all .4s ease-in-out;
-            transition: all .4s ease-in-out; 
+            transition: all .4s ease-in-out;
         }
-
         .btn-hover:focus {
             outline: none;
-}
-        .btnhover.btncolor{
+        }
+        .btnhover.btncolor {
             background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #F24645);
             box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
 
         }
-
-
-
-
-
-
-
-        @media screen and (max-width:1000px){
-        .banner{
-            height:550px !important;
+        @media screen and (max-width:1000px) {
+            .banner {
+                height: 550px !important;
             }
         }
 
-        @media screen and (max-width:500px){
-        .banner{
-            height:300px !important;
+        @media screen and (max-width:500px) {
+            .banner {
+                height: 300px !important;
 
             }
         }
     </style>
-
 </head>
 
 <body>
-
     <!--carrosel de imagens principal-->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -156,20 +137,17 @@ require "./php/includes/menu.php";
                         Morada te ajuda a terminar aquela obra parada em casa,
                         fazer pequenas reformas e realizar manutenções de forma rápida
                         e <em>gratuita</em> da doação de ferramentas e serviços voluntários.<br>
-                        Faça parte da iniciativa Morada você também e leve felicidade a sua região. </p>                  
+                        Faça parte da iniciativa Morada você também e leve felicidade a sua região. </p>
                 </div>
             </div>
         </div>
     </div>
     <!--sessão de serviços-->
-
     <div class="container-fluid bg-light text-center">
         <h1 class="display-4 text-light mb-3 pt-5 ajuda">AJUDA</h1>
         <p class="lead text-light">Você poderá encontrar serviços voluntarios e doações de todo tipo de ferramenta.</p>
         <p class="lead text-light mb-5">Comece escolhendo uma categoria:</p>
-
         <div class="row mb-5">
-
             <div class="col-sm-4">
                 <a href="servicos.php"><img src="img/servicos/doacao.png" width="150px"></a>
                 <h4 class="display-4 text-light">Doações</h4>
@@ -182,52 +160,16 @@ require "./php/includes/menu.php";
             <div class="col-sm-4">
                 <a href="servicos.php"><img src="img/servicos/construcao2.png" width="150px"></a>
                 <h4 class="display-4 text-light">Construção</h4>
-                <p class="lead text-light">alvenaria, concretagem, revestimentos, carpintaria, etc.</p>
+                <p class="lead text-light">Alvenaria, concretagem, revestimentos, carpintaria, etc...</p>
             </div>
-
             <div class="col-sm-4">
                 <a href="servicos.php"><img src="img/servicos/conserto2.png" width="150px"></a>
                 <h4 class="display-4 text-light">Manutenção</h4>
-                <p class="lead text-light">instalação elétrica, reparos hidráulicos, pinturas, etc</p>
+                <p class="lead text-light">Instalação elétrica, reparos hidráulicos, pinturas, etc...</p>
             </div>
-
-
         </div>
         <br><br>
-
     </div>
-
-
-
-    <!-- <div class="container" style="margin-bottom:70px; margin-top:70px">
-                <a name="servicos" id="servicos"></a>
-                <h3 class="display-3">Ajuda disponivel</h3>
-                    <p class="lead">Você poderá encontrar empréstimos e doações de todo tipo de ferramentas e serviços voluntário.
-                    <br>
-                        Comece escolhendo uma categoria:
-                    </p>
-            </div> -->
-
-    <!-- <div class="container"style="margin-bottom:70px; margin-top:70px">
-            <div class="row">
-                <div class="col-sm">
-                    <a href="servicos.php" style="text-decoration: none;"></a>
-                    <img src="img/servicos/construction.png" width="120px">
-                    <a href="./servicos.php" class="btn btn-primary">CONSTRUÇÃO</a>
-                     <h3 class="display-5">CONSTRUÇÃO</h3>
-                    <p>alvenaria, concretagem, revestimentos, carpintaria, etc.</p>
-                    
-                </div>
-            <div class="col-sm">
-                <a href="servicos.php" style="text-decoration: none;">
-                <img src="img/servicos/conserto.png" width="120px"></a>
-                <a href="./servicos.php" class="btn btn-primary">CONSTRUÇÃO</a>
-                <h3 class="display-5">MANUTENÇÃO</h3>
-                <p>instalação elétrica, reparos hidráulicos, pinturas, etc</p> 
-
-            </div>
-        </div> -->
-
     <div class="container text-center" style="margin-bottom:70px; margin-top:70px;">
         <h3 class="display-4 mb-5 ">MURAL</h3>
         <div class="row">
@@ -236,52 +178,37 @@ require "./php/includes/menu.php";
                     <div class="container">
                         <h3 class="display-7">João Pedro</h3>
                         <p>Oi pessoal sou carpinteiro e posso ajudar com serviços leves, mandar descrição por favor, fui...</p>
-                        <p class="lead">Vista Alegre.</p>
+                        <!-- <p class="lead">Vista Alegre.</p> -->
                     </div>
                 </div>
             </div>
-
-
             <div class="col-sm-4">
                 <div class="jumbotron">
                     <div class="container">
                         <h3 class="display-7">Ana Furtado</h3>
-                        <p>Olá a todos preciso de doação de material de pintura pode ser usado mesmo, Obrigado a todos.</p>
-                        <p class="lead">BelfordRoxo.</p>
+                        <p>Olá a todos preciso de doação de material de pintura pode ser usado mesmo, obrigado a todos.</p>
+                        <!-- <p class="lead">BelfordRoxo.</p> -->
                     </div>
                 </div>
             </div>
-
-
             <div class="col-sm-4">
                 <div class="jumbotron">
                     <div class="container">
                         <h3 class="display-7">Janaína</h3>
                         <p>Alguém tem sobra madeira de alguma obra? Poderia ser sarrafos mesmo. </p>
-                        <p class="lead">Duque de caxias</p>
+                        <!-- <p class="lead">Duque de Caxias</p> -->
                     </div>
                 </div>
             </div>
-
         </div>
         <div class="container btnteste">
-        <a href="projetos.php" class="btn btnhover btncolor btn-lg mb-5">Veja mais</a>
+            <a href="mural.php" class="btn btnhover btncolor btn-lg mb-5">Veja mais</a>
         </div>
     </div>
 
-
-
-
-
-
-
     <h3 class="display-4 text-center "> AVALIAÇÕES </h3>
-
-
-
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-
             <div class="carousel-item active">
                 <img class="d-block w-100 tamanho" src="./img/carroselprincipal/tst.png" alt="First slide">
                 <div class="container bg-text">
@@ -290,9 +217,7 @@ require "./php/includes/menu.php";
                     <h2 class=" text-about">Bruna Pontes</h2>
                     <p class="lead text-light">
                         <small>
-                            Somos uma organização que visa desenvolver o desenvolvimento individual
-                            e coletivo de pessoas em situação insultentável de moradia.
-
+                            Muito gratificante saber que existem pessoas dispostas a ajudar a gente sem receber nada em troca.
                         </small>
                     </p>
                 </div>
@@ -305,14 +230,11 @@ require "./php/includes/menu.php";
                     <h2 class=" text-about"> Vanessa Ramos</h2>
                     <p class="lead text-light">
                         <small>
-                            Nossos valores e ideais são paltados no trabalho voluntário,
-                            onde o indivíduo se sensibiliza com a causa do próximo e
-
+                            Tive a oportunidade de ajudar pessoas que realmente preccisavam, e isso para mim não tem preço!
                         </small>
                     </p>
                 </div>
             </div>
-
             <div class="carousel-item">
                 <img class="d-block w-100 tamanho" src="./img/carroselprincipal/tst.png" alt="Second slide">
                 <div class="container bg-text">
@@ -321,9 +243,7 @@ require "./php/includes/menu.php";
                     <h2 class=" text-about"> Marcos Paulo </h2>
                     <p class="lead text-light">
                         <small>
-                            Nossos valores e ideais são paltados no trabalho voluntário,
-                            onde o indivíduo se sensibiliza com a causa do próximo e
-
+                            Estava com um pequeno problema em minha residencia, mas que me encomadava muito, graças ao programa recebi ajuda.
                         </small>
                     </p>
                 </div>
@@ -338,70 +258,10 @@ require "./php/includes/menu.php";
             <span class="sr-only">Next</span>
         </a>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- <div class="container">
-            <div class="row">
-                <div class="vol-md-12">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators"> 
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
-                        </ol>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="sigle-box">
-                                                <div class="img-area"><img src="./img/icones/profile.png"></div>
-                                                <div class="img-text">
-                                                <h2>Profile</h2>
-                                                <p>lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                                </div>                                           
-                                            </div>
-
-                                            <div class="sigle-box">
-                                                <div class="img-area"><img src="./img/icones/profile.png"></div>
-                                                <div class="img-text">
-                                                <h2>Profile</h2>
-                                                <p>lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                                </div>                                           
-                                            </div>
-
-                                            <div class="sigle-box">
-                                                <div class="img-area"><img src="./img/icones/profile.png"></div>
-                                                <div class="img-text">
-                                                <h2>Profile</h2>
-                                                <p>lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                                </div>                                           
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-
     </div>
     </div>
     </div>
     </div>
-
-
-
-
 
     <div class="row-12 align-content-center text-center">
         <div class="card bg-muted ">
@@ -412,19 +272,9 @@ require "./php/includes/menu.php";
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
     <!-- Footer -->
     <?php
-
     require "./php/includes/footer.html";
-
     ?>
     <!-- Footer -->
 
