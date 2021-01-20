@@ -1,8 +1,3 @@
-<?php
-
-require "./php/includes/menu.php";
-
-?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -16,6 +11,8 @@ require "./php/includes/menu.php";
     <link rel="stylesheet" type="text/css" href="./css/main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+    <link rel="icon" href="img/logomorada.png">
+    
     <style>
         h1 {
             color: orangered
@@ -52,6 +49,11 @@ require "./php/includes/menu.php";
         }
     </style>
 </head>
+
+<?php
+require "./php/includes/menu.php";
+?>
+
 <body>
     <div class="container-fluid">
         <div class="container text-center">

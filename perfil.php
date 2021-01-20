@@ -3,8 +3,6 @@ include('./php/actions/conexaodb.php');
 include('./php/includes/verifica_login.php');
 include('./php/actions/exibeDados.php');
 include('./php/actions/exibeServicos.php');
-
-require "./php/includes/menu.php";
 ?>
 
 <!DOCTYPE html>
@@ -65,32 +63,73 @@ require "./php/includes/menu.php";
             color: #fff;
         }
 
-        select{
+        select {
             border-radius: 15px;
             border: 1px solid orangered;
             width: 150px;
         }
 
-        select:hover{
+        select:hover {
             border-radius: 15px;
             border: 1px solid orangered;
             width: 150px;
         }
 
-        .btnstyle{
+        .btnstyle {
             border: 1px solid orangered;
             background-color: orangered !important;
             width: 140px;
             border-radius: 30px;
             color: white;
         }
+
         .btnstyle:hover {
             border: 1px solid orangered;
             background-color: #2d2d2d !important;
             color: orangered !important;
         }
+
+        .dangerB a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .dangerB{
+            border-radius: 30px;
+            background-color: red;
+        }
+
+        ::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #222222; 
+        
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: rgb(23, 86, 204); 
+        border-radius: 10px;
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #ff7300; 
+      }
+
+      .anyClass {
+        height:100px!important;
+        overflow-y: auto;
+}
     </style>
 </head>
+
+<?php
+require "./php/includes/menu.php";
+?>
 
 <body>
 
@@ -123,41 +162,29 @@ require "./php/includes/menu.php";
                         <p>Nome: <?php echo $data['nome']; ?> </p>
 
                         <p>Sobrenome: <?php
-                                        // if ($_SESSION['sobrenome'] = null)
-                                        //     echo "Não Cadastrado";
-                                        // else
+
                                         echo $data['sobrenome']; ?> </p>
 
                         <p>Endereço: <?php
-                                        //     if (!$_SESSION['endereco'] = null)
-                                        //     echo "Não Cadastrado";
-                                        // else
+
                                         echo $data['endereco']; ?> </p>
 
                         <p>Bairro: <?php
-                                    // if (!$_SESSION['bairro'] = null)
-                                    //     echo "Não Cadastrado";
-                                    // else
+
                                     echo $data['bairro']; ?>
                         </p>
 
                         <p>Complemento: <?php
-                                        //     if (!$_SESSION['complemento'] = null)
-                                        //     echo "Não Cadastrado";
-                                        // else
+
                                         echo $data['complemento']; ?> </p>
 
                         <p>CEP: <?php
-                                //     if (!$_SESSION['cep'] = null)
-                                //     echo "Não Cadastrado";
-                                // else
+
                                 echo $data['cep']; ?></p>
                         <p>Telefone:
-                            <?php //if (!$_SESSION['telefone'] = null)
-                            //echo "Não Cadastrado";
-                            //else
+                            <?php 
                             echo $data['telefone']; ?> </p>
-                   
+
 
                 </div>
                 <div class="col-sm border">
@@ -184,70 +211,61 @@ require "./php/includes/menu.php";
                         <form>
                 </div>
                 <div class="col-sm border">
+             <h4 class="display-4">Avisos</h4>
 
-                    <!-- <?php
-                            if ($result = $conn->query($query)) {
-
-                                /* fetch associative array */
-                                while ($row = $result->fetch_assoc()) {
-
-                                    echo $row['nome'];
-                                    echo '</br>';
-                                    echo $row['categoria'];
-                                    echo '</br>';
-                                    echo $row['descricao'];
-
-                                    echo '</br>';
-                                    echo '</br>';
-                                }
-                            }
-
-                            ?> -->
-                    <?php
-
-                    $result = $conn->query($query);
-                    if ($result->num_rows > 0) {
-
-                        echo '<h1 class="display-4":>' . 'Mural' . '</h1>';
-                        /* fetch associative array */
-                        while ($row = $result->fetch_assoc()) {
-
-                    ?>
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-body text-center">
-                                    <h5 class="card-title"><?php echo $row['tipo'] ?></h5>
-                                    <p class="card-text"><?php echo $row['descricao']; ?></p>
-
-
-                                </div>
+            <?php 
+           
+                $result = $conn->query($query);
+                if ($result->num_rows > 0) {
+                
+                    /* fetch associative array */
+                    while ($row = $result->fetch_assoc()) {
+                        
+                           ?>
+                           <div class="Card" style="width: 18rem;">
+                                <div class="card-body  anyClass">
+                                    <h5 class="card-title"><?php echo $row['tipo']?></h5>
+                                    <p class="card-text"><?php echo $row['descricao'];?></p>
+                                </div> 
                             </div>
-                            <br>
-                    <?php
-                        }
-                    } else {
-                        echo "Nenhuma solicitação feita!";
+                            <button class="btn btn-danger dangerB mt-2 mb-2"><a href="./php/actions/deleta_servico.php?id=<?php echo $row['idservicos'];?>" data-confirm="Tem certeza que deseja excluir o intem selecionado?" >Apagar</a></button>
+                            <br>         
+            <?php
                     }
-
-                    ?>
-                </div>
+                
+                }else{
+                    echo '<p>'. 'Nenhuma solicitação feita!'. '<p>';
+                }
+           
+           ?>
+            </div>
 
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
+<!-- Footer -->
     <?php
 
     require "./php/includes/footer.html";
 
     ?>
-    <!-- Footer -->
+    <!-- Footer -->       
+    
+</div>
 
-    </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+            <script src="./js/confirma.js" crossorigin="anonymous"></script>
 
 </body>
-
 </html>

@@ -1,6 +1,3 @@
-<?php
-require "./php/includes/menu.php";
-?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -18,7 +15,7 @@ require "./php/includes/menu.php";
   <script src="js/javascript.js"></script>
 
   <!--icones-->
-  <link rel="icon" href="img/topcasaicon.png">
+  <link rel="icon" href="img/logomorada.png">
 
   <!--css scrollbar-->
   <style>
@@ -73,6 +70,11 @@ require "./php/includes/menu.php";
     }
   </style>
 </head>
+
+<?php
+require "./php/includes/menu.php";
+?>
+
 <body>
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">

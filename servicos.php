@@ -1,6 +1,4 @@
-<?php
-require "./php/includes/menu.php";
-?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -34,6 +32,10 @@ require "./php/includes/menu.php";
         }
     </style>
 </head>
+
+<?php
+require "./php/includes/menu.php";
+?>
 
 <body>
 
