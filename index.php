@@ -1,6 +1,4 @@
-<?php
-require "./php/includes/menu.php";
-?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -90,9 +88,24 @@ require "./php/includes/menu.php";
 
             }
         }
+
+        @media screen and (max-width:1000px) {
+            .tamanho {
+                height: 550px !important;
+            }
+        }
+
+        @media screen and (max-width:500px) {
+            .tamanho {
+                height: 300px !important;
+
+            }
+        }
     </style>
 </head>
-
+<?php
+require "./php/includes/menu.php";
+?>
 <body>
     <!--carrosel de imagens principal-->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
