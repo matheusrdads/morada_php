@@ -11,8 +11,6 @@ if(isset($_POST['empresa']) && isset($_POST['email']) && isset($_POST['mensagem'
    
     $sql = "INSERT into `contato` (`empresa`, `email`, `mensagem`) values ('$empresa',' $email', '$mensagem');";
     
-    var_dump($sql);
-    
     $result = $conn->query($sql);
 
     var_dump($result);

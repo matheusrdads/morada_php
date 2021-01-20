@@ -15,7 +15,7 @@ if(isset($_POST['categoria']) && isset($_POST['descricao']) ){
 
     if ($resultado){
         echo "<script>alert('Solicitação feita com sucesso!');</script>";
-        header("Location: ../../servicos.php");
+        header("Location: ../../perfil.php");
     }
     else {
         echo "<script>alert('Houve um erro ao salvar...');</script>";

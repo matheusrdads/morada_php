@@ -14,7 +14,6 @@ if(isset($_POST['nome']) && isset($_POST['sobrenome']) && isset($_POST['email'])
     $sql = "INSERT into contato (nome, email, telefone, mensagem, sobrenome) values ('$nome', '$email', '$telefone', '$mensagem', '$sobrenome');";
     $result = $conn->query($sql);
 
-    var_dump($result);
     
     if ($result){
        echo "<script>alert('Mensagem enviada com sucesso!');</script>";

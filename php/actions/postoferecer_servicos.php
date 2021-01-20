@@ -14,7 +14,7 @@ if(isset($_POST['categoria']) && isset($_POST['descricao']) ){
     $resultado = $conn->query($sql);
 
     if ($resultado){
-        header("Location: ../../servicos.php");
+        header("Location: ../../perfil.php");
     }
     else {
         echo "<script>alert('Houve um erro ao salvar...');</script>";

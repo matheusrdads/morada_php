@@ -49,9 +49,7 @@ if($row == 1) {
     $_SESSION['telefone'] = $telefone;
     header('Location: ../../perfil.php');
     
-
 } else {
-
     $_SESSION['nao_autenticado'] = true;
     
     header('Location:../../login.php');
