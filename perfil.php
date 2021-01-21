@@ -229,7 +229,7 @@ require "./php/includes/menu.php";
                                     <p class="card-text"><?php echo $row['descricao'];?></p>
                                 </div> 
                             </div>
-                            <button class="btn btn-danger dangerB mt-2 mb-2"><a href="./php/actions/deleta_servico.php?id=<?php echo $row['idservicos'];?>" data-confirm="Tem certeza que deseja excluir o intem selecionado?" >Apagar</a></button>
+                            <a style="background-color: red; border-radius: 20px; text-decoration: none; color:white;" href="./php/actions/deleta_servico.php?id=<?php echo $row['idservicos'];?>" data-confirm="Tem certeza que deseja excluir o intem selecionado?" >Apagar</a>
                             <br>         
             <?php
                     }
