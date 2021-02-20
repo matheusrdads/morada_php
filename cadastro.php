@@ -1,5 +1,3 @@
-
-
 <?php
 session_start();
 ?>
@@ -15,8 +13,6 @@ session_start();
     <!--css-->
     <link rel="stylesheet" href="css/main.css">
 
-    <!-- <link rel="stylesheet" type="text/css" href="css/contato.css"> -->
-
     <!--icones-->
     <link rel="icon" href="img/logomorada.png">
     <script src="https://kit.fontawesome.com/6dd1874a7a.js" crossorigin="anonymous"></script>
@@ -27,20 +23,25 @@ session_start();
     <script src="js/javascript.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+    
+    <!--css-->
     <style>
         body {
             background: rgb(65, 255, 250) !important;
             background: linear-gradient(180deg, rgba(65, 255, 250, 1) 0%, rgba(0, 73, 255, 1) 91%) !important;
         }
+
         .formulario {
             background-color: transparent !important;
             border: 2px solid cyan;
             border-radius: 15px;
 
         }
+
         .formulario:hover {
             border: 2px solid orangered !important;
         }
+
         .jumbotron {
             margin-left: 8% !important;
             width: 80% !important;
@@ -49,6 +50,7 @@ session_start();
             box-shadow: 0 0 2em rgb(0, 0, 0) !important;
 
         }
+
         .submitbtn {
             background: -webkit-linear-gradient(right, #00e0ff, #1145ff);
             border: none;
@@ -65,21 +67,25 @@ session_start();
         .submitbtn:hover {
             box-shadow: 0px 1px 18px #1145ff;
         }
+
         .form {
             width: 60%;
             align-items: center;
             margin-left: 20%;
             color: #fff;
         }
+
         ::placeholder {
             color: #fff !important;
             text-align: center
         }
     </style>
+    
 </head>
 <?php
 require "./php/includes/menu.php";
 ?>
+
 <body>
     <div class="container">
         <div class="jumbotron mt-5 mb-5">

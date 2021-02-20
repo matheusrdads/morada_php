@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,11 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviços</title>
-    <link rel="stylesheet" href="css/main.css">
+
     <script src="js/javascript.js"></script>
+
+    <!--css-->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--icones-->
     <link rel="icon" href="img/logomorada.png">
     <link rel="stylesheet" href="css/servicos.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+     <!--css-->
     <style>
         .submitbtn {
             background: -webkit-linear-gradient(right, #00e0ff, #1145ff);
@@ -25,13 +30,16 @@
             transition: 0.25s;
             width: 140px;
         }
+
         .card {
             border: none;
         }
+
         .submitbtn:hover {
             box-shadow: 0px 1px 18px #1145ff;
         }
     </style>
+
 </head>
 
 <?php

@@ -1,9 +1,10 @@
-
 <?php
 include('./php/actions/conexaodb.php');
 include('./php/includes/verifica_login.php');
 include('./php/actions/exibeDados.php');
 include('./php/actions/exibeServicos.php');
+// $ava = $_SESSION['estrela'];
+
 ?>
 
 <!DOCTYPE html>
@@ -16,9 +17,13 @@ include('./php/actions/exibeServicos.php');
 
     <!--css-->
     <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/avaliacao.css">
+    
+    <!--icones-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href=" http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
 
-
+     <!--css-->
     <style>
         .edit {
             color: #fff !important;
@@ -90,42 +95,43 @@ include('./php/actions/exibeServicos.php');
             color: orangered !important;
         }
 
-        .dangerB a{
+        .dangerB a {
             text-decoration: none;
             color: white;
         }
 
-        .dangerB{
+        .dangerB {
             border-radius: 30px;
             background-color: red;
         }
 
         ::-webkit-scrollbar {
-        width: 10px;
-      }
-      
-      /* Track */
-      ::-webkit-scrollbar-track {
-        background: #222222; 
-        
-      }
-      
-      /* Handle */
-      ::-webkit-scrollbar-thumb {
-        background: rgb(23, 86, 204); 
-        border-radius: 10px;
-      }
-      
-      /* Handle on hover */
-      ::-webkit-scrollbar-thumb:hover {
-        background: #ff7300; 
-      }
+            width: 10px;
+        }
 
-      .anyClass {
-        height:100px!important;
-        overflow-y: auto;
-}
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #222222;
+
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: rgb(23, 86, 204);
+            border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ff7300;
+        }
+
+        .anyClass {
+            height: 100px !important;
+            overflow-y: auto;
+        }
     </style>
+
 </head>
 
 <?php
@@ -148,6 +154,64 @@ require "./php/includes/menu.php";
                                 <li class="nav-item"><a href="#" class="nav-link"> <img src="img/icones/tw.png" /></a></li>
                                 <li class="nav-item"><a href="#" class="nav-link"> <img src="img/icones/rss.png" /></a></li>
                             </ul>
+                        </div>
+                        
+                        
+
+
+                        <div class="estrelas"> 
+                        <div>
+                        <?php if(isset($data['estrela'])) {
+                                    
+                                    $ava = $data['estrela']; ?>
+                                
+                                <?php
+                                if ($ava > 0 and $ava < 2) { ?>
+                                    <label for="estrela_cinco"><i class="fa"></i></label>
+                                    <input type="radio" id="estrela_um" name="estrela" value="1">
+
+                                <?php } else if ($ava > 1 and $ava < 3) { ?>
+                                    <label for="estrela_cinco"><i class="fa"></i></label>
+                                    <label for="estrela_cinco"><i class="fa"></i></label>
+
+
+                                <?php } else if ($ava > 2 and $ava < 4) { ?>
+                                    <label for="estrela_cinco"><i class="fa"></i></label>
+                                    <label for="estrela_cinco"><i class="fa"></i></label>
+                                    <label for="estrela_cinco"><i class="fa"></i></label>
+
+
+                                <?php } else if ($ava > 3 and $ava < 5) { ?>
+                                    <label for="estrela_cinco"><i class="fa"></i></label>
+                                    <label for="estrela_cinco"><i class="fa"></i></label>
+                                    <label for="estrela_cinco"><i class="fa"></i></label>
+                                    <label for="estrela_cinco"><i class="fa"></i></label>
+
+
+                                <?php } else if ($ava > 4 and $ava < 6) { ?>
+                                    <label for="estrela_cinco"><i class="fa"></i></label>
+                                    <label for="estrela_cinco"><i class="fa"></i></label>
+                                    <label for="estrela_cinco"><i class="fa"></i></label>
+                                    <label for="estrela_cinco"><i class="fa"></i></label>
+                                    <label for="estrela_cinco"><i class="fa"></i></label>
+
+
+                                <?php } 
+                                
+                                
+                                } else {?>
+
+                                    <p>Usuário sem avaliação</p>
+
+                                
+                                <?php } ?>
+
+
+                               
+
+                                </div>
+                            
+
                         </div>
 
                         <div class="nav justify-content-center" style="margin-bottom:30px">
@@ -172,7 +236,7 @@ require "./php/includes/menu.php";
 
                         <p>Bairro: <?php
 
-                                    echo $data['bairro']; ?>
+                                        echo $data['bairro']; ?>
                         </p>
 
                         <p>Complemento: <?php
@@ -183,7 +247,7 @@ require "./php/includes/menu.php";
 
                                 echo $data['cep']; ?></p>
                         <p>Telefone:
-                            <?php 
+                            <?php
                             echo $data['telefone']; ?> </p>
 
 
@@ -212,61 +276,75 @@ require "./php/includes/menu.php";
                         <form>
                 </div>
                 <div class="col-sm border">
-             <h4 class="display-4">Avisos</h4>
+                    <h4 class="display-4">Avisos</h4>
 
-            <?php 
-           
-                $result = $conn->query($query);
-                if ($result->num_rows > 0) {
-                
-                    /* fetch associative array */
-                    while ($row = $result->fetch_assoc()) {
+                    <?php
+
+                    $result = $conn->query($query);
+                    if ($result->num_rows > 0) {
+
+                        while ($row = $result->fetch_assoc()) { ?>
                         
-                           ?>
-                           <div class="Card" style="width: 18rem;">
-                                <div class="card-body  anyClass">
-                                    <h5 class="card-title"><?php echo $row['tipo']?></h5>
-                                    <p class="card-text"><?php echo $row['descricao'];?></p>
-                                </div> 
-                            </div>
-                            <a style="background-color: red; border-radius: 20px; text-decoration: none; color:white;" href="./php/actions/deleta_servico.php?id=<?php echo $row['idservicos'];?>" data-confirm="Tem certeza que deseja excluir o intem selecionado?" >Apagar</a>
-                            <br>         
-            <?php
-                    }
-                
-                }else{
-                    echo '<p>'. 'Nenhuma solicitação feita!'. '<p>';
-                }
-           
-           ?>
+                        <?php  if(isset($row['tipo']) && isset($row['descricao'])) {?>
+                            <div class="Card mb-5" style="width: 18rem;">
+                                 
+                                     <h5 class="card-title"><?php echo $row['tipo']?></h5>
+                                     <p class="card-text"><?php echo $row['descricao'];?></p>
+                                     <a style="background-color: red; border-radius: 20px; text-decoration: none; color:white;" href="./php/actions/deleta_servico.php?id=<?php echo $row['idservicos'];?>" data-confirm="Tem certeza que deseja excluir o intem selecionado?" >Apagar</a>
+                                <br>   
+
+                                
+                             </div>
+
+
+                             <?php } else if (isset($row['parceiro']) && isset($row['mensagem'])) { ?>
+                                <div class="Card mb-5" style="width: 18rem;">
+                                 
+                             
+                                     <h5 class="card-title"><?php echo"Voçe recebeu um match de:  ", $row['parceiro']?></h5>
+                                     <p class="card-text"><?php echo "Recado: ", $row['mensagem'];?></p> 
+                                     <a style="background-color: red; border-radius: 20px; text-decoration: none; color:white;" href="./php/actions/deleta_servico.php?id=<?php echo $row['idservicos'];?>" data-confirm="Tem certeza que deseja excluir o intem selecionado?" >Apagar</a>
+                             <br>         
+
+                               
+                             </div>
+                             <?php  } ?>
+                           
+                                   
+
+             <?php
+                     }
+                 
+                 }else{
+                     echo '<p>'. 'Nenhuma solicitação feita!'. '<p>';
+                 }
+            
+            ?>
+
+                </div>
+
+            
             </div>
 
-            </div>
+           
         </div>
     </div>
 
-<!-- Footer -->
+    <!-- Footer -->
     <?php
 
     require "./php/includes/footer.html";
 
     ?>
-    <!-- Footer -->       
-    
-</div>
+    <!-- Footer -->
 
+    </div>
 
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-            crossorigin="anonymous"></script>
-            <script src="./js/confirma.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="./js/confirma.js" crossorigin="anonymous"></script>
 
 </body>
+
 </html>

@@ -5,6 +5,7 @@ session_start();
 require_once "conexaodb.php";
 require "exibeDados.php";
 
+
 $id = $data['idusuario'];
 
 if(isset($_POST['categoria']) && isset($_POST['descricao']) ){

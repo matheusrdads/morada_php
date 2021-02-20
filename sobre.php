@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -19,50 +16,59 @@
   <!--icones-->
   <link rel="icon" href="img/logomorada.png">
 
-  <!--css scrollbar-->
+  <!--css-->
   <style>
     ::-webkit-scrollbar {
       width: 10px;
     }
+
     /* Track */
     ::-webkit-scrollbar-track {
       background: #222222;
       /* box-shadow: inset 0 0 5px rgb(148, 225, 255);  */
       /* border-radius: 10px; */
     }
+
     /* Handle */
     ::-webkit-scrollbar-thumb {
       background: rgb(23, 86, 204);
       border-radius: 10px;
     }
+
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
       background: #ff7300;
     }
+
     @media screen and (max-width:1000px) {
       .response {
         width: 550px;
         height: 600px;
       }
     }
+
     @media screen and (max-width:780px) {
       .response {
         width: 600px;
         height: 680px;
       }
     }
+
     @media screen and (max-width:580px) {
       .response {
         width: 450px;
         height: 780px;
       }
+
       .display-3 {
         font-size: 40px;
       }
+
       h3 {
         font-size: 25px;
       }
     }
+
     @media screen and (max-width:400px) {
       .response {
         width: 380px;
@@ -71,6 +77,7 @@
       }
     }
   </style>
+
 </head>
 
 <?php

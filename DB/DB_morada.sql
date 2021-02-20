@@ -60,10 +60,12 @@ CREATE TABLE `servicos` (
   `categoria` varchar(45) DEFAULT NULL,
   `descricao` varchar(700) DEFAULT NULL,
   `email` varchar(45) DEFAULT NULL,
+  `parceiro` varchar(100) DEFAULT NULL,
+  `mensagem` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`idservicos`),
   KEY `fk_servicos_idx` (`usuario`),
   CONSTRAINT `fk_servicos` FOREIGN KEY (`usuario`) REFERENCES `usuarios` (`idusuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=156 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,7 +74,7 @@ CREATE TABLE `servicos` (
 
 LOCK TABLES `servicos` WRITE;
 /*!40000 ALTER TABLE `servicos` DISABLE KEYS */;
-INSERT INTO `servicos` VALUES (7,4,'solicitando','construcao','servico de alvenaria',NULL),(8,5,'solicitando','construcao','serviço de esgoto',NULL),(9,5,'oferecendo','construcao','montagem de forma',NULL),(10,5,'oferecendo','manutencao','pequenos servicços de elétrica',NULL),(11,5,'solicitando','manutencao','serviços de cobertura',NULL),(12,5,'solicitando','construcao','serviços diversos',NULL),(13,5,'solicitando','construcao','esgoto',NULL),(14,5,'solicitando','construcao','pitura',NULL),(15,5,'solicitando','construcao','fundacao',NULL),(17,2,'solicitando','construcao','pintura',NULL);
+INSERT INTO `servicos` VALUES (9,1,'oferecendo','construcao','montagem de forma',NULL,NULL,NULL),(10,2,'oferecendo','manutencao','pequenos servicços de elétrica',NULL,NULL,NULL),(108,3,'solicitando','construcao','pintura',NULL,NULL,NULL),(109,4,'solicitando','construcao','execução de alvenaria',NULL,NULL,NULL),(110,5,'solicitando','construcao','serviço de solda',NULL,NULL,NULL),(111,6,'oferecendo','construcao','reparo de telhados',NULL,NULL,NULL),(112,2,'solicitando','construcao','pintura',NULL,NULL,NULL),(142,10,'solicitando','manutencao','bombeiro hidráulico ',NULL,'gio','Olá vc entende de quadros elétricos?'),(145,1,NULL,'construcao',NULL,NULL,'João','Olá teria um modelo de planta baixa simples pra me passar? '),(146,1,NULL,'construcao',NULL,NULL,'João','Vi que está oferecendo serviço de forma,  quantos metros quadrados seria?'),(147,2,NULL,'manutencao',NULL,NULL,'João','Sou pintor entre em contato comigo cel: 2199998888'),(148,6,NULL,'manutencao',NULL,NULL,'João','Tenho algumas telhas rachadas aqui em casa poderia me ajudar?'),(149,3,NULL,'manutencao',NULL,NULL,'João','Sou pintor, a área é muito grande que voçe precisa pintar.'),(150,4,NULL,'manutencao',NULL,NULL,'João','Sou pedreiro mais não tenho muita experiencia se for pouca coisa posso te ajudar.'),(151,5,NULL,'manutencao',NULL,NULL,'João','Sou soldador, posso te ajudar mas preciso de uma ajuda para levar o equipamento. O serviço é grande?'),(154,8,'oferecendo','construcao','Posso ajudar com a confecção de pequenas armações e lajes pequenas.',NULL,NULL,NULL),(155,9,'solicitando','construcao','Conheco um pouco de alvenaria e emboço para quem precisar.',NULL,NULL,NULL);
 /*!40000 ALTER TABLE `servicos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -95,8 +97,9 @@ CREATE TABLE `usuarios` (
   `cep` varchar(45) DEFAULT NULL,
   `telefone` varchar(45) DEFAULT NULL,
   `complemento` varchar(45) DEFAULT NULL,
+  `estrela` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idusuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -105,7 +108,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'gio','oliveira','gio@gio.com','202cb962ac59075b964b07152d234b70','arquiteta','rua 3','iraja','669988','6655889','sobrado'),(2,'João','Silva','joao@joao.com','202cb962ac59075b964b07152d234b70','Arquiteto','Rua das Andradas','Bairro ABC','22222222','123456789','Apartamento 3'),(3,'Roberto','roberto','matheus@matheus','202cb962ac59075b964b07152d234b70','','rua9','ffgg','346','34566','dghhj'),(4,'marcos','oliveira','marcos@gmail.com','202cb962ac59075b964b07152d234b70','pintor','avenide 45','iraja','2345','23455','fundos'),(5,'pedro',NULL,'pedro@gmail.com','202cb962ac59075b964b07152d234b70',NULL,NULL,NULL,NULL,NULL,NULL),(6,'matheus albuquerque',NULL,'mat@mat.com','202cb962ac59075b964b07152d234b70',NULL,NULL,NULL,NULL,NULL,NULL),(8,'henrrique',NULL,'henrrique@henrrique','202cb962ac59075b964b07152d234b70',NULL,NULL,NULL,NULL,NULL,NULL),(9,'ricardo',NULL,'ricardo@ricardo','202cb962ac59075b964b07152d234b70',NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `usuarios` VALUES (1,'giovana','oliveira','gio@gmail.com','202cb962ac59075b964b07152d234b70','arquiteta','rua 3','Terreirão','26070-000','2199998888','sobrado','5'),(2,'João','Silva','joao@gmail.com','202cb962ac59075b964b07152d234b70','Pintor','Rua das Andradas','Terreirão','26070-000','2199998888','Apartamento 3','3'),(3,'roberto','roberto','matheus@gmail.com','202cb962ac59075b964b07152d234b70','pedreiro','rua9','Terreirão','26070-000','2199998888','esquina','2'),(4,'marcos','oliveira','marcos@gmail.com','202cb962ac59075b964b07152d234b70','pintor','avenide 45','Terreirão','26070-000','2199998888','fundos','1'),(5,'pedro','pamplona','pedro@gmail.com','202cb962ac59075b964b07152d234b70','ajudante','rua 5','Terreirão','26070-000','2199998888','quadra ','4'),(6,'matheus','albuquerque','mat@gmail.com','202cb962ac59075b964b07152d234b70','engenheiro','avenida treze de maio','Terreirão','26070-000','2199998888','fundos','3'),(8,'henrrique','souza','henrrique@gmail.com','202cb962ac59075b964b07152d234b70','armador','avenida 12','Terreirão','26070-000','2199998888','apartamento 4','4'),(9,'ricardo','silva','ricardo@gmail.com','202cb962ac59075b964b07152d234b70','pedreiro','rua gonzaga','Terreirão','26070-000','2199998888','rua 3','1'),(10,'mario','andrade','mario@gmail.com','202cb962ac59075b964b07152d234b70','vendedor','beco 12','Terreirão','26070-000','2199998888','sobrado','3');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -126,4 +129,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-20 22:34:10
+-- Dump completed on 2021-02-20 11:19:42

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -16,14 +15,19 @@
 
     <!--icones-->
     <link rel="icon" href="img/logomorada.png">
+
+    
+    <!--css-->
     <style>
         body {
             background: rgb(240, 249, 255);
         }
+
         .bg-light {
             background: rgb(0, 138, 255);
             background: linear-gradient(180deg, rgba(0, 138, 255, 1) 0%, rgba(142, 71, 255, 1) 90%);
         }
+
         .jumbotron {
             border: 2px solid #fff;
             background: url(img/duck.png) no-repeat;
@@ -34,12 +38,15 @@
             -webkit-border-radius: 30px !important;
             border-radius: 30px !important;
         }
+
         .tamanho {
             position: static;
         }
+
         .rounded-circle {
             border: 5px solid white;
         }
+
         * {
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
@@ -59,6 +66,7 @@
             -webkit-transition: all .4s ease-in-out;
             transition: all .4s ease-in-out;
         }
+
         .btnhover:hover {
             color: #fff;
             background-position: 100% 0;
@@ -67,14 +75,17 @@
             -webkit-transition: all .4s ease-in-out;
             transition: all .4s ease-in-out;
         }
+
         .btn-hover:focus {
             outline: none;
         }
+
         .btnhover.btncolor {
             background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #F24645);
             box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
 
         }
+
         @media screen and (max-width:1000px) {
             .banner {
                 height: 550px !important;
@@ -105,6 +116,7 @@
 <?php
 require "./php/includes/menu.php";
 ?>
+
 <body>
     <!--carrosel de imagens principal-->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

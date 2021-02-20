@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$username = "root"; 
+$username = "root";
 $password = "";
 $database = "moradabd";
 
@@ -14,6 +14,3 @@ if (!$conn) {
     die("A conexão do BD falhou" . mysqli_connect_error());
     echo mysqli_connect_error();
 }
-
-
-?>

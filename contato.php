@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -11,7 +9,6 @@
     <!--css-->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/contato.css">
-    <!-- <link rel="stylesheet" type="text/css" href="css/contato.css"> -->
 
     <!--icones-->
     <link rel="icon" href="img/logomorada.png">
@@ -22,16 +19,20 @@
     <script src="./js/validacaocontato.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+        
+    <!--css-->
     <style>
         body {
             background: rgb(65, 255, 250) !important;
             background: linear-gradient(180deg, rgba(65, 255, 250, 1) 0%, rgba(0, 73, 255, 1) 91%) !important;
         }
+
         .formulario {
             background-color: transparent !important;
             border: 0;
 
         }
+
         .jumbotron {
             margin-left: 8%;
             width: 80%;
@@ -39,11 +40,13 @@
             background-color: white !important;
             box-shadow: 0 0 2em black;
         }
+
         .form-border {
             background: -webkit-linear-gradient(right, #a6fffd, #0074ff);
             height: 1px;
             width: 100%;
         }
+
         .submitbtn {
             background: -webkit-linear-gradient(right, #00e0ff, #1145ff);
             border: none;
@@ -56,6 +59,7 @@
             transition: 0.25s;
             width: 153px;
         }
+
         .submitbtn:hover {
             box-shadow: 0px 1px 18px #1145ff;
         }

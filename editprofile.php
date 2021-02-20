@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -12,22 +10,28 @@
     <link rel="stylesheet" type="text/css" href="./css/main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+    <!--icones-->
     <link rel="icon" href="img/logomorada.png">
-    
+
+        
+    <!--css-->
     <style>
         h1 {
             color: orangered
         }
+
         .inpt {
             border-radius: 15px;
             border: 1px solid grey;
             width: 280px;
         }
+
         .inpt_date {
             border-radius: 15px;
             border: 1px solid grey;
             width: 280px;
         }
+
         .sobre {
             border-radius: 30px;
             border: 1px solid grey;
@@ -35,6 +39,7 @@
             height: 200px;
             ;
         }
+
         .btnstyle {
             border: 1px solid orangered;
             background-color: orangered !important;
@@ -43,12 +48,14 @@
             border-radius: 30px;
             color: white;
         }
+
         .btnstyle:hover {
             border: 1px solid orangered;
             background-color: #2d2d2d !important;
             color: orangered !important;
         }
     </style>
+
 </head>
 
 <?php
