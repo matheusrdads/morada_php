@@ -1,6 +1,8 @@
 <?php
+include('./php/includes/verifica_login.php');
 include('./php/actions/conexaodb.php');
 // include('./php/actions/exibeServicos.php');
+
 
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 $query = "SELECT * FROM usuarios JOIN servicos ON usuarios.idusuario = servicos.usuario WHERE idusuario = $id ; ";
@@ -331,6 +333,7 @@ require "./php/includes/menu.php";
                         <form class="form text-center mt-1" method="post" action="./php/actions/mensagem.php?id=<?php echo $data['idusuario']; ?>">
                         <label for="">
                             <h4 class="display-4 ">Ajude essa Pessoa</h4>
+                            <p class="text-danger" style=" font-weight: 500;">Mande uma mensagem para esse usuário pedindo mais informações sobre o serviço, e passe pelo menos um contato para que ela possa retornar.</p>
                             <select name="categoria">
                                 <option value="construcao">Construção</option>
                                 <option value="manutencao">Manutenção</option>

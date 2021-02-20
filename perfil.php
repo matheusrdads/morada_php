@@ -152,7 +152,6 @@ require "./php/includes/menu.php";
                                 <li class="nav-item"><a href="#" class="nav-link"> <img src="img/icones/linkedin.png" /></a></li>
                                 <li class="nav-item"><a href="#" class="nav-link"> <img src="img/icones/face.png" /></a></li>
                                 <li class="nav-item"><a href="#" class="nav-link"> <img src="img/icones/tw.png" /></a></li>
-                                <li class="nav-item"><a href="#" class="nav-link"> <img src="img/icones/rss.png" /></a></li>
                             </ul>
                         </div>
                         
