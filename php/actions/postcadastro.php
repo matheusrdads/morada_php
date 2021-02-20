@@ -12,7 +12,7 @@ if (isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['senha'])) {
 
     if ($result) {
         $_SESSION['cadastrado'] = true;
-        header("Location: ../../login.php");
+        header("Location: ../.././login.php");
     } else {
         echo "<script>alert('Houve um erro ao salvar...');</script>";
     }

@@ -20,8 +20,8 @@ if (isset($_POST['estrela'])) {
 
     $resultado_avaliacoes = mysqli_query($conn, $result_avaliacoes);
     if (mysqli_insert_id($conn)) {
-        $_SESSION['msg'] = "Usuário avaliado com sucesso";
-        header("Location: ./php/actions/perfilpublico.php");
+        // $_SESSION['msg'] = "Usuário avaliado com sucesso";
+        header("Location: ./perfilpublico.php");
     }
 }
 

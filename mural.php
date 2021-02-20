@@ -2,10 +2,6 @@
 require "./php/actions/conexaodb.php";
 ?>
 
-<?php
-require "./php/includes/menu.php"; ?>
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -113,6 +109,9 @@ require "./php/includes/menu.php"; ?>
 
 <body>
 
+<?php
+require "./php/includes/menu.php"; ?>
+
     <!-- Titulo Mural -->
     <div class="container text-center">
         <h3 class="display-3 " style=" margin-top:30px;">MURAL</h3>
@@ -162,26 +161,47 @@ require "./php/includes/menu.php"; ?>
                 } else {
 
                     while ($row = $result->fetch_assoc()) {
-                    ?>
-
+                    
+                        if($row['tipo'] === 'oferecendo') {?>
                         <div class="col-sm-4">
-                            <div class="card mb-5 rounded">
+                            <div class="card mb-5 rounded bg-success">
                                 <div class="container">
                                     <div class="anyClass">
                                         <h3 class="display-7"><?php echo $row['nome']; ?></h3>
                                         <p class=" lead"><?php echo "Tipo: ", $row['descricao']; ?></p>
                                         <p class="lead"><?php echo "Status: ", $row['tipo']; ?></p>
                                         <p class="lead"><?php echo "Bairro: ", $row['bairro']; ?></p>
-                                        <p class="lead"><?php echo "Rua", $row['endereco']; ?></p>
+                                        <p class="lead"><?php echo "Endereço: ", $row['endereco']; ?></p>
                                         <button type="button" class="btn text-white edit"><a href="./perfilpublico.php?id=<?php echo $row['idusuario']; ?>">Visualizar</a></button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                <?php
-                    }
-                }
-                ?>
+
+                       
+                <?php }  else if ($row['tipo'] === 'solicitando'){
+
+
+                        if($row['tipo'] === 'solicitando') {?>
+                            <div class="col-sm-4">
+                                <div class="card mb-5 rounded bg-secondary">
+                                    <div class="container">
+                                        <div class="anyClass">
+                                            <h3 class="display-7"><?php echo $row['nome']; ?></h3>
+                                            <p class=" lead"><?php echo "Tipo: ", $row['descricao']; ?></p>
+                                            <p class="lead"><?php echo "Status: ", $row['tipo']; ?></p>
+                                            <p class="lead"><?php echo "Bairro: ", $row['bairro']; ?></p>
+                                            <p class="lead"><?php echo "Endereço: ", $row['endereco']; ?></p>
+                                            <button type="button" class="btn text-white edit"><a href="./perfilpublico.php?id=<?php echo $row['idusuario']; ?>">Visualizar</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+
+        <?php  }    
+                  }
+                    }  }?>
 
                 <!-- Fecha o background color -->
             </div>

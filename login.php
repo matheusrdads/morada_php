@@ -1,6 +1,5 @@
 <?php
 session_start();
-require "./php/includes/menu.php";
 ?>
 
 <!DOCTYPE html>
@@ -77,6 +76,11 @@ require "./php/includes/menu.php";
 </head>
 
 <body>
+
+<?php
+
+require "./php/includes/menu.php";
+?>
     <div class="container">
         <div class="jumbotron mt-5 mb-5">
             <h1 class="display-4 text-center mb-5 pt-5 text-white">Login</h1>
