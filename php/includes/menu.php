@@ -21,8 +21,6 @@
                     <li class="nav-item"><a href="https://www.linkedin.com/" class="nav-link"> <img src="img/icones/linkedin.png" /></a></li>
                     <li class="nav-item"><a href="https://www.facebook.com/" class="nav-link"> <img src="img/icones/face.png" /></a></li>
                     <li class="nav-item"><a href="https://www.twitter.com/" class="nav-link"> <img src="img/icones/tw.png" /></a></li>
-                    <li class="nav-item"><a href="https://www.google.com/" class="nav-link"> <img src="img/icones/rss.png" /></a></li>
-
                 </ul>
             </div>
         </div>
@@ -57,7 +55,7 @@
             </ul>
 
             <form method="GET" class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2 style" name="pesquisar" type="text" placeholder="Pesquisar">
+                <input class="form-control mr-sm-2 style text-white" name="pesquisar" type="text" placeholder="Pesquisar">
                 <button class="btn btn-outline-primary botao" type="submit"><i class="gg-search"></i></button>
             </form>
             <ul class="navbar-nav">
@@ -67,7 +65,6 @@
                         <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
                             <a class="dropdown-item" href="login.php">Entre</a>
                             <a class="dropdown-item" href="perfil.php">Meu Perfil</a>
-                            <a class="dropdown-item" href="editprofile.php">Editar Perfil</a>
                             <a class="dropdown-item" href="./php/includes/logout.php">Sair da Conta</a>
                         </div>
                 </li>
