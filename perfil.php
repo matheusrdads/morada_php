@@ -47,6 +47,28 @@ include('./php/actions/exibeServicos.php');
             box-shadow: 0px 1px 18px #1145ff;
         }
 
+        .editDelete {
+            color: #fff !important;
+            background: -webkit-linear-gradient(right, #C70000 , #FF0000);
+            border: none;
+            border-radius: 21px;
+            box-shadow: 0px 1px 8px #FF0000;
+            height: 34px;
+            margin: 0 auto;
+            margin-top: 50px;
+            transition: 0.25s;
+            width: 95px;
+        }
+
+        .editDelete a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .editDelete:hover {
+            box-shadow: 0px 1px 18px #FF0000;
+        }
+
         .sair {
             background: -webkit-linear-gradient(right, #00e0ff, #1145ff);
             border: none;
@@ -130,6 +152,8 @@ include('./php/actions/exibeServicos.php');
             height: 100px !important;
             overflow-y: auto;
         }
+        
+
     </style>
 
 </head>
@@ -289,7 +313,7 @@ require "./php/includes/menu.php";
                                  
                                      <h5 class="card-title"><?php echo $row['tipo']?></h5>
                                      <p class="card-text"><?php echo $row['descricao'];?></p>
-                                     <a style="background-color: red; border-radius: 20px; text-decoration: none; color:white;" href="./php/actions/deleta_servico.php?id=<?php echo $row['idservicos'];?>" data-confirm="Tem certeza que deseja excluir o intem selecionado?" >Apagar</a>
+                                     <a class="btn editDelete" href="./php/actions/deleta_servico.php?id=<?php echo $row['idservicos'];?>" data-confirm="Tem certeza que deseja excluir o intem selecionado?" >Apagar</a>
                                 <br>   
 
                                 
@@ -302,7 +326,7 @@ require "./php/includes/menu.php";
                              
                                      <h5 class="card-title"><?php echo"Voçe recebeu um match de:  ", $row['parceiro']?></h5>
                                      <p class="card-text"><?php echo "Recado: ", $row['mensagem'];?></p> 
-                                     <a style="background-color: red; border-radius: 20px; text-decoration: none; color:white;" href="./php/actions/deleta_servico.php?id=<?php echo $row['idservicos'];?>" data-confirm="Tem certeza que deseja excluir o intem selecionado?" >Apagar</a>
+                                     <a class="btn editDelete" href="./php/actions/deleta_servico.php?id=<?php echo $row['idservicos'];?>" data-confirm="Tem certeza que deseja excluir o intem selecionado?" >Apagar</a>
                              <br>         
 
                                

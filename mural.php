@@ -19,7 +19,29 @@ require "./php/actions/conexaodb.php";
     
      <!--css-->
     <style>
-        .edit {
+        .editOferecendo {
+            color: #fff !important;
+            background: -webkit-linear-gradient(right, #00C785, #00C724);
+            border: none;
+            border-radius: 21px;
+            box-shadow: 0px 1px 8px #00C724;
+            height: 42.3px;
+            margin: 0 auto;
+            margin-top: 5px;
+            transition: 0.25s;
+            width: 123px;
+        }
+
+        .editOferecendo a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .editOferecendo:hover {
+            box-shadow: 0px 1px 18px #00C724;
+        }
+
+        .editSolicitando {
             color: #fff !important;
             background: -webkit-linear-gradient(right, #00e0ff, #1145ff);
             border: none;
@@ -32,12 +54,12 @@ require "./php/actions/conexaodb.php";
             width: 123px;
         }
 
-        .edit a {
+        .editSolicitando a {
             text-decoration: none;
             color: #fff;
         }
 
-        .edit:hover {
+        .editSolicitando:hover {
             box-shadow: 0px 1px 18px #1145ff;
         }
         .jumbotron {
@@ -164,15 +186,15 @@ require "./php/includes/menu.php"; ?>
                     
                         if($row['tipo'] === 'oferecendo') {?>
                         <div class="col-sm-4">
-                            <div class="card mb-5 rounded bg-success">
+                            <div class="card mb-5 rounded">
                                 <div class="container">
                                     <div class="anyClass">
                                         <h3 class="display-7"><?php echo $row['nome']; ?></h3>
                                         <p class=" lead"><?php echo "Tipo: ", $row['descricao']; ?></p>
-                                        <p class="lead"><?php echo "Status: ", $row['tipo']; ?></p>
+                                        <p style="color: green;" class="lead"><?php echo "Status: ", $row['tipo']; ?></p>
                                         <p class="lead"><?php echo "Bairro: ", $row['bairro']; ?></p>
                                         <p class="lead"><?php echo "Endereço: ", $row['endereco']; ?></p>
-                                        <button type="button" class="btn text-white edit"><a href="./perfilpublico.php?id=<?php echo $row['idusuario']; ?>">Visualizar</a></button>
+                                        <button type="button" class="btn text-white editOferecendo"><a href="./perfilpublico.php?id=<?php echo $row['idusuario']; ?>">Visualizar</a></button>
                                     </div>
                                 </div>
                             </div>
@@ -184,15 +206,15 @@ require "./php/includes/menu.php"; ?>
 
                         if($row['tipo'] === 'solicitando') {?>
                             <div class="col-sm-4">
-                                <div class="card mb-5 rounded bg-secondary">
+                                <div class="card mb-5 rounded">
                                     <div class="container">
                                         <div class="anyClass">
                                             <h3 class="display-7"><?php echo $row['nome']; ?></h3>
                                             <p class=" lead"><?php echo "Tipo: ", $row['descricao']; ?></p>
-                                            <p class="lead"><?php echo "Status: ", $row['tipo']; ?></p>
+                                            <p style="color: #00e0ff;" class="lead"><?php echo "Status: ", $row['tipo']; ?></p>
                                             <p class="lead"><?php echo "Bairro: ", $row['bairro']; ?></p>
                                             <p class="lead"><?php echo "Endereço: ", $row['endereco']; ?></p>
-                                            <button type="button" class="btn text-white edit"><a href="./perfilpublico.php?id=<?php echo $row['idusuario']; ?>">Visualizar</a></button>
+                                            <button type="button" class="btn text-white editSolicitando"><a href="./perfilpublico.php?id=<?php echo $row['idusuario']; ?>">Visualizar</a></button>
                                         </div>
                                     </div>
                                 </div>
