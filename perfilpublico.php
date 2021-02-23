@@ -1,7 +1,6 @@
 <?php
 include('./php/includes/verifica_login.php');
 include('./php/actions/conexaodb.php');
-// include('./php/actions/exibeServicos.php');
 
 
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);

@@ -194,7 +194,7 @@ require "./php/includes/menu.php"; ?>
                                         <p style="color: green;" class="lead"><?php echo "Status: ", $row['tipo']; ?></p>
                                         <p class="lead"><?php echo "Bairro: ", $row['bairro']; ?></p>
                                         <p class="lead"><?php echo "Endereço: ", $row['endereco']; ?></p>
-                                        <button type="button" class="btn text-white editOferecendo"><a href="./perfilpublico.php?id=<?php echo $row['idusuario']; ?>">Visualizar</a></button>
+                                        <button type="button" class="btn text-white editOferecendo"><a href="./perfilpublico.php?id=<?php echo $row['idusuario']; ?>" >Visualizar</a></button>
                                     </div>
                                 </div>
                             </div>
@@ -214,7 +214,7 @@ require "./php/includes/menu.php"; ?>
                                             <p style="color: #00e0ff;" class="lead"><?php echo "Status: ", $row['tipo']; ?></p>
                                             <p class="lead"><?php echo "Bairro: ", $row['bairro']; ?></p>
                                             <p class="lead"><?php echo "Endereço: ", $row['endereco']; ?></p>
-                                            <button type="button" class="btn text-white editSolicitando"><a href="./perfilpublico.php?id=<?php echo $row['idusuario']; ?>">Visualizar</a></button>
+                                            <button type="button" class="btn text-white editSolicitando"><a href="./perfilpublico.php?id=<?php echo $row['idusuario'];?>">Visualizar</a></button>
                                         </div>
                                     </div>
                                 </div>

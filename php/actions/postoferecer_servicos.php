@@ -8,20 +8,24 @@ require "exibeDados.php";
 
 $id = $data['idusuario'];
 
-if(isset($_POST['categoria']) && isset($_POST['descricao']) ){
-    $categoria = $_POST['categoria'];
-    $descricao = $_POST['descricao'];
+if( !empty($_POST['descricao'])  && !empty($_POST['categoria']) ) {
 
-    $sql = "INSERT INTO `servicos`( `usuario`, `tipo`, `categoria`, `descricao` ) VALUES ( '$id', 'oferecendo', '$categoria', '$descricao' )";
-    $resultado = $conn->query($sql);
+        $categoria = $_POST['categoria'];
+        $descricao = $_POST['descricao'];
+        
+        
+        $sql = "INSERT INTO `servicos`( `usuario`, `tipo`, `categoria`, `descricao` ) VALUES ( '$id', 'oferecendo', '$categoria', '$descricao' )";
+        $resultado = $conn->query($sql);
 
-    if ($resultado){
+
         header("Location: ../../perfil.php");
-    }
-    else {
-        echo "<script>alert('Houve um erro ao salvar...');</script>";
-    }
-    };
 
     
-?>
+    } else if( empty($_POST['descricao'])) {
+
+        echo ("<script>
+        window.alert('É necessário uma mensagem!')
+        window.location.href='../../perfil.php';
+    </script>");
+        
+    } 

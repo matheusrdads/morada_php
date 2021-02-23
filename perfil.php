@@ -291,6 +291,7 @@ require "./php/includes/menu.php";
                     <form class="form" method="post" action="./php/actions/postoferecer_servicos.php">
                         <h3 class="display-4 pt-5">Ofereça ajuda</h3>
                         <select name="categoria">
+
                             <option value="construcao">Construção</option>
                             <option value="manutencao">Manutenção</option>
                         </select><br><br>
