@@ -93,7 +93,7 @@ require "./php/actions/conexaodb.php";
 
         /* Track */
         ::-webkit-scrollbar-track {
-            background: #222222;
+            /* background: #222222; */
 
         }
 

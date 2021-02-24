@@ -50,11 +50,12 @@ include('./php/actions/exibeServicos.php');
             color: #fff !important;
             background: -webkit-linear-gradient(right, #C70000, #FF0000);
             border: none;
-            border-radius: 21px;
+            border-bottom-left-radius: 21px;
+            border-top-left-radius: 21px;
             box-shadow: 0px 1px 8px #FF0000;
             height: 34px;
             margin: 0 auto;
-            margin-top: 50px;
+            margin-top: 3px;
             transition: 0.25s;
             width: 95px;
         }
@@ -64,7 +65,7 @@ include('./php/actions/exibeServicos.php');
             color: #fff;
         }
 
-        .edit:hover {
+        .editDelete:hover {
             box-shadow: 0px 1px 18px #FF0000;
         }
 
@@ -72,11 +73,12 @@ include('./php/actions/exibeServicos.php');
             color: #fff !important;
             background: -webkit-linear-gradient(right, #00e0ff, #1145ff);
             border: none;
-            border-radius: 21px;
+            border-bottom-right-radius: 21px;
+            border-top-right-radius: 21px;
             box-shadow: 0px 1px 8px #1145ff;
             height: 34px;
             margin: 0 auto;
-            margin-top: 50px;
+            margin-top: 3px;
             transition: 0.25s;
             width: 95px;
         }
@@ -87,6 +89,52 @@ include('./php/actions/exibeServicos.php');
         }
 
         .BtnEdit:hover {
+            box-shadow: 0px 1px 18px #1145ff;
+        }
+
+        .btnInicio {
+            color: #fff !important;
+            background: -webkit-linear-gradient(right, #C70000, #FF0000);
+            border: none;
+            border-bottom-left-radius: 21px;
+            border-top-left-radius: 21px;
+            box-shadow: 0px 1px 8px #FF0000;
+            height: 34px;
+            margin: 0 auto;
+            margin-top: 3px;
+            transition: 0.25s;
+            width: 95px;
+        }
+
+        .btnInicio a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .btnInicio:hover {
+            box-shadow: 0px 1px 18px #FF0000;
+        }
+
+        .btnFim {
+            color: #fff !important;
+            background: -webkit-linear-gradient(right, #00e0ff, #1145ff);
+            border: none;
+            border-bottom-right-radius: 21px;
+            border-top-right-radius: 21px;
+            box-shadow: 0px 1px 8px #1145ff;
+            height: 34px;
+            margin: 0 auto;
+            margin-top: 3px;
+            transition: 0.25s;
+            width: 95px;
+        }
+
+        .btnFim a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .btnFim:hover {
             box-shadow: 0px 1px 18px #1145ff;
         }
 
@@ -333,11 +381,13 @@ require "./php/includes/menu.php";
                                     <h5 class="card-title"><?php echo $row['tipo'] ?></h5>
                                     <p class="card-text"><?php echo $row['descricao']; ?></p>
                                     <a class="btn editDelete" href="./php/actions/deleta_servico.php?id=<?php echo $row['idservicos']; ?>" data-confirm="Tem certeza que deseja excluir o intem selecionado?">Apagar</a>
+                                    
 
                                     <!-- Button trigger modal -->
                                     <button type="button" class="btn btn-primary BtnEdit" data-toggle="modal" data-target="#exampleModal">
                                         Editar
                                     </button>
+
 
                                     <!-- Modal -->
                                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -365,14 +415,25 @@ require "./php/includes/menu.php";
                                             </div>
                                         </div>
                                     </div>
+                                    
                                     </form>
+                                    <a class="btn btnInicio" href="./php/actions/postServicoIniciado.php?id=<?php echo $row['idservicos']?>&inicio=<?php echo $row['inicio']?>">Iniciado</a>
 
+                                    <a class="btn btnFim" href="./php/actions/postServicoFinalizado.php?id=<?php echo $row['idservicos']?>&fim=<?php echo $row['fim']?>">Finalizado</a>
 
-                                    <!-- <button class="btn BtnEdit" href="./php/actions/deleta_servico.php?id=<?php echo $row['idservicos']; ?>" data-confirm="Tem certeza que deseja excluir o intem selecionado?">Editar</button> -->
+                                    <p style="margin-bottom: 0.2rem">Iniciado em: <?php echo  $row['inicio']?></p>
+
+                                    <p style="margin-bottom: 0.2rem">Finalizado em: <?php echo $row['fim']?></p>
+
+                                    <!-- <a class="btn editDelete" href="./php/actions/deleta_servico.php?id=<?php echo $row. ['idservicos']; ?>" data-confirm="Tem certeza que deseja excluir o intem selecionado?">Concluido</a> -->
+
                                     <br>
 
 
                                 </div>
+                                <?php echo "<a href='postEditOferecerServico.php?id/inicio=" . $row['idservicos'] . '/' . $row['inicio'] ."'>Editar</a>"?>;
+
+
 
 
                             <?php } else if (isset($row['parceiro']) && isset($row['mensagem'])) { ?>
@@ -384,7 +445,6 @@ require "./php/includes/menu.php";
                                     <a class="btn editDelete" href="./php/actions/deleta_servico.php?id=<?php echo $row['idservicos']; ?>" data-confirm="Tem certeza que deseja excluir o intem selecionado?">Apagar</a>
 
                                     <br>
-
 
                                 </div>
                             <?php  } ?>
