@@ -1,3 +1,9 @@
+<?php
+session_start();
+include('./php/actions/exibeDados.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -69,19 +75,18 @@ require "./php/includes/menu.php";
             <h1> Editar seu Perfil </h1>
             <form method="post" action="./php/actions/posteditprofile.php">
                 <div class="form-group">
-                    <input type="text" class="inpt mb-3" name="nome" id="nome" placeholder="Nome">
-                    <input type="text" class="inpt mb-3" name="sobrenome" id="sobrenome" placeholder="Sobrenome">
+                    <input type="text" class="inpt mb-3" name="nome" id="nome" placeholder="Nome" value="<?php echo $data['nome']; ?>" required>
+                    <input type="text" class="inpt mb-3" name="sobrenome" id="sobrenome" placeholder="Sobrenome" value="<?php echo $data['sobrenome']; ?>" required>
                     <br>
-                    <input type="text" class="inpt mb-3" name="endereco" id="endereco" placeholder="Endereço">
-                    <input type="number" class="inpt mb-3" name="cep" id="cep" placeholder="Cep">
+                    <input type="text" class="inpt mb-3" name="endereco" id="endereco" placeholder="Endereço" value="<?php echo $data['endereco']; ?>" required>
+                    <input type="number" class="inpt mb-3" name="cep" id="cep" placeholder="Cep" value="<?php echo $data['cep']; ?>" required>
                     <br>
-                    <input type="text" class="inpt mb-3" name="bairro" id="bairro" placeholder="Bairro">
-                    <input type="text" class="inpt mb-3" name="complemento" id="complemento" placeholder="Complemento">
+                    <input type="text" class="inpt mb-3" name="bairro" id="bairro" placeholder="Bairro" value="<?php echo $data['bairro']; ?>" required>
+                    <input type="text" class="inpt mb-3" name="complemento" id="complemento" placeholder="Complemento" value="<?php echo $data['complemento']; ?>" required>
                     <br>
-                    <input type="number" class="inpt mb-3" name="telefone" id="telefone" placeholder="Telefone">
-                    <input type="date" class="inpt_date mb-3" name="data_de_nascimento" id="idade" placeholder="idade">
+                    <input type="number" class="inpt mb-3" name="telefone" id="telefone" placeholder="Telefone" value="<?php echo $data['telefone']; ?>" required>
                     <br>
-                    <input class="sobre mb-3" type="text" name="sobre" placeholder="Sobre">
+                    <input class="sobre mb-3" type="text" name="sobre" placeholder="Sobre" value="<?php echo $data['sobre']; ?>" required>
                     <br>
                     <br>
                     <button class="btnstyle" type="submit">Enviar</button>

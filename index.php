@@ -8,15 +8,28 @@
 
     <!--css-->
     <link rel="stylesheet" type="text/css" href="./css/main.css">
-    <link rel="stylesheet" type="text/css" href="./css/slick.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">  
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">  
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@600&display=swap" rel="stylesheet">
     <!--icones-->
     <link rel="icon" href="img/logomorada.png">
 
-    
+
     <!--css-->
     <style>
         body {
@@ -25,7 +38,7 @@
 
         .bg-light {
             background: rgb(0, 138, 255);
-            background: linear-gradient(180deg, rgba(0, 138, 255, 1) 0%, rgba(142, 71, 255, 1) 90%);
+            background: linear-gradient(0deg, rgba(0, 138, 255, 1) 0%, rgba(142, 71, 255, 1) 90%);
         }
 
         .jumbotron {
@@ -86,31 +99,19 @@
 
         }
 
-        @media screen and (max-width:1000px) {
+        @media screen and (max-width:600px) {
             .banner {
-                height: 550px !important;
+                height: 250px !important;
+            }
+            .logobnr{
+               
+                margin-top: 70px !important;
             }
         }
 
-        @media screen and (max-width:500px) {
-            .banner {
-                height: 300px !important;
+      
 
-            }
-        }
-
-        @media screen and (max-width:1000px) {
-            .tamanho {
-                height: 550px !important;
-            }
-        }
-
-        @media screen and (max-width:500px) {
-            .tamanho {
-                height: 300px !important;
-
-            }
-        }
+       
     </style>
 </head>
 <?php
@@ -119,14 +120,26 @@ require "./php/includes/menu.php";
 
 <body>
     <!--carrosel de imagens principal-->
+    
+
+    <div>
+        <img src="img/carroselprincipal/bannerdiv.png" class="logobnr" width="100%">
+        
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
+
+
+
+        
+        
         <div class="carousel-inner">
+            
             <div class="carousel-item active">
+            
                 <img class="d-block w-100 banner" src="./img/carroselprincipal/banner1.png" alt="First slide">
             </div>
             <div class="carousel-item banner">
@@ -136,6 +149,11 @@ require "./php/includes/menu.php";
                 <img class="d-block w-100 banner" src="./img/carroselprincipal/banner3.png" alt="Third slide">
             </div>
         </div>
+        </div>
+     
+
+
+
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
@@ -147,55 +165,55 @@ require "./php/includes/menu.php";
     </div>
 
     <!--sessão de sobre-->
-    <div class="container-fluid pt-5">
-        <div class="container" style="margin-bottom:70px; margin-top:20px">
+    <div class="container" style="margin-bottom:100px; margin-top:100px">
+        <!-- <div class="container" style="margin-bottom:70px; margin-top:70px">
             <div class="row">
-                <div class="ml-3 col-xl-4 col-lg-4 col-md- col-sm-6 text-center imgdark">
-                    <img class="bgdark img-responsive" src="img/logodark.png" width="65%">
+                <div class=" col-xl-4 col-lg-4 col-md- col-sm-6 text-center">
+                   
                 </div>
-                <div class="ml-4 col-xl-6 col-lg-6 col-md- col-sm-8 textabout">
-                    <h3 class="display-3 sobre">Sobre</h3>
-                    <p class="lead">Nós acreditamos que todas as pessoas tem direito a moradias seguras, dignas e em bom estado,
+                <div class=" col-xl-6 col-lg-6 col-md- col-sm-8 textabout"> -->
+                    <h3 class="display-3 sobre text-center" style="font-family: 'Oswald', sans-serif; color:#656565 ">Sobre</h3>
+                    <p class="lead text-center">Nós acreditamos que todas as pessoas tem direito a moradias seguras, dignas e em bom estado,
                         e pensando nisso queremos te
                         ajudar a transformar o seu lar.
                         Morada te ajuda a terminar aquela obra parada em casa,
                         fazer pequenas reformas e realizar manutenções de forma rápida
                         e <em>gratuita</em> da doação de ferramentas e serviços voluntários.<br>
                         Faça parte da iniciativa Morada você também e leve felicidade a sua região. </p>
-                </div>
+                <!-- </div>
             </div>
-        </div>
+        </div> -->
     </div>
     <!--sessão de serviços-->
     <div class="container-fluid bg-light text-center">
-        <h1 class="display-4 text-light mb-3 pt-5 ajuda">AJUDA</h1>
-        <p class="lead text-light">Você poderá encontrar serviços voluntarios e doações de todo tipo de ferramenta.</p>
-        <p class="lead text-light mb-5">Comece escolhendo uma categoria:</p>
+        <h1 class="display-4 text-light mb-3 pt-5 ajuda" style="font-family: 'Satisfy', cursive; ">AJUDA</h1>
+        <p class="lead text-light" style="font-family: 'Oswald', sans-serif; color:#656565 ">Você poderá encontrar serviços voluntarios e doações de todo tipo de ferramenta.</p>
+        <p class="lead text-light mb-5" style="font-family: 'Oswald', sans-serif; color:#656565 ">Comece escolhendo uma categoria:</p>
         <div class="row mb-5">
             <div class="col-sm-4">
                 <a href="servicos.php"><img src="img/servicos/doacao.png" width="150px"></a>
-                <h4 class="display-4 text-light">Doações</h4>
-                <p class="lead text-light">Tá com aquela caixa de ferramenta parada em casa,<br> ou algum resto de obra?<br>
+                <h4 class="display-4 text-light" style="font-family: 'El Messiri', sans-serif;">Doações</h4>
+                <!-- <p class="lead text-light">Tá com aquela caixa de ferramenta parada em casa,<br> ou algum resto de obra?<br> -->
                     <!-- Sabia que alguém na sua rua pode estar só esperando por
-                  você pra tornar a casa em um verdadeiro lar? -->
-                    Ofereça ajuda aqui na Morada!
+                  você pra tornar a casa em um verdadeiro lar?
+                    Ofereça ajuda aqui na Morada!  -->
                 </p>
             </div>
             <div class="col-sm-4">
                 <a href="servicos.php"><img src="img/servicos/construcao2.png" width="150px"></a>
-                <h4 class="display-4 text-light">Construção</h4>
-                <p class="lead text-light">Alvenaria, concretagem, revestimentos, carpintaria, etc...</p>
+                <h4 class="display-4 text-light" style="font-family: 'El Messiri', sans-serif;">Construção</h4>
+                <!-- <p class="lead text-light">Alvenaria, concretagem, revestimentos, carpintaria, etc...</p> -->
             </div>
             <div class="col-sm-4">
                 <a href="servicos.php"><img src="img/servicos/conserto2.png" width="150px"></a>
-                <h4 class="display-4 text-light">Manutenção</h4>
-                <p class="lead text-light">Instalação elétrica, reparos hidráulicos, pinturas, etc...</p>
+                <h4 class="display-4 text-light" style="font-family: 'El Messiri', sans-serif;">Manutenção</h4>
+                <!-- <p class="lead text-light">Instalação elétrica, reparos hidráulicos, pinturas, etc...</p> -->
             </div>
         </div>
         <br><br>
     </div>
     <div class="container text-center" style="margin-bottom:70px; margin-top:70px;">
-        <h3 class="display-4 mb-5 ">MURAL</h3>
+        <h3 class="display-3 mb-5" style="font-family: 'Oswald', sans-serif; color:#FF8F00 "  >MURAL</h3>
         <div class="row">
             <div class="col-sm-4">
                 <div class="jumbotron">
@@ -230,7 +248,6 @@ require "./php/includes/menu.php";
         </div>
     </div>
 
-    <h3 class="display-4 text-center "> AVALIAÇÕES </h3>
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">

@@ -80,12 +80,12 @@ require "./php/includes/menu.php";
                     <div class="form-row">
                         <div class="col">
                             <label for="nome">Nome</label>
-                            <input type="text" name="nome" class="form-control formulario" placeholder="">
+                            <input type="text" name="nome" class="form-control formulario" placeholder="" required>
                             <div class="form-border"></div>
                         </div>
                         <div class="col">
                             <label for="sobrenome">Sobrenome</label>
-                            <input type="text" class="form-control formulario" name="sobrenome" placeholder="">
+                            <input type="text" class="form-control formulario" name="sobrenome" placeholder="" required>
                             <div class="form-border"></div>
                         </div>
                     </div>
@@ -94,19 +94,19 @@ require "./php/includes/menu.php";
                     <div class="form-row">
                         <div class="col">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control formulario" name="email" placeholder="">
+                            <input type="email" class="form-control formulario" name="email" placeholder="" required>
                             <div class="form-border"></div>
                         </div>
                         <div class="col">
                             <label for="telefone">Telefone</label>
-                            <input type="number" class="form-control formulario" name="telefone" placeholder="">
+                            <input type="number" class="form-control formulario" name="telefone" placeholder="" required>
                             <div class="form-border"></div>
                         </div>
                     </div>
                 </div>
                 <div class="form-group ">
                     <label for="exampleFormControlTextarea1">Mensagem</label>
-                    <textarea class="ml-2 form-control formulario" id="exampleFormControlTextarea1" name="mensagem" rows="3"></textarea>
+                    <textarea class="ml-2 form-control formulario" id="exampleFormControlTextarea1" name="mensagem" rows="3" required></textarea>
                     <div class="form-border"></div>
                 </div>
                 <button type="submit" class="btn btn-primary btn-block submitbtn">Enviar</button>

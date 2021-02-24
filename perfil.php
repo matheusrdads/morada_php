@@ -3,7 +3,6 @@ include('./php/actions/conexaodb.php');
 include('./php/includes/verifica_login.php');
 include('./php/actions/exibeDados.php');
 include('./php/actions/exibeServicos.php');
-// $ava = $_SESSION['estrela'];
 
 ?>
 
@@ -18,12 +17,12 @@ include('./php/actions/exibeServicos.php');
     <!--css-->
     <link rel="stylesheet" type="text/css" href="./css/main.css">
     <link rel="stylesheet" type="text/css" href="./css/avaliacao.css">
-    
+
     <!--icones-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href=" http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
 
-     <!--css-->
+    <!--css-->
     <style>
         .edit {
             color: #fff !important;
@@ -49,7 +48,7 @@ include('./php/actions/exibeServicos.php');
 
         .editDelete {
             color: #fff !important;
-            background: -webkit-linear-gradient(right, #C70000 , #FF0000);
+            background: -webkit-linear-gradient(right, #C70000, #FF0000);
             border: none;
             border-radius: 21px;
             box-shadow: 0px 1px 8px #FF0000;
@@ -65,9 +64,32 @@ include('./php/actions/exibeServicos.php');
             color: #fff;
         }
 
-        .editDelete:hover {
+        .edit:hover {
             box-shadow: 0px 1px 18px #FF0000;
         }
+
+        .BtnEdit {
+            color: #fff !important;
+            background: -webkit-linear-gradient(right, #00e0ff, #1145ff);
+            border: none;
+            border-radius: 21px;
+            box-shadow: 0px 1px 8px #1145ff;
+            height: 34px;
+            margin: 0 auto;
+            margin-top: 50px;
+            transition: 0.25s;
+            width: 95px;
+        }
+
+        .BtnEdit a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .BtnEdit:hover {
+            box-shadow: 0px 1px 18px #1145ff;
+        }
+
 
         .sair {
             background: -webkit-linear-gradient(right, #00e0ff, #1145ff);
@@ -152,8 +174,6 @@ include('./php/actions/exibeServicos.php');
             height: 100px !important;
             overflow-y: auto;
         }
-        
-
     </style>
 
 </head>
@@ -178,62 +198,60 @@ require "./php/includes/menu.php";
                                 <li class="nav-item"><a href="#" class="nav-link"> <img src="img/icones/tw.png" /></a></li>
                             </ul>
                         </div>
-                        
-                        
 
 
-                        <div class="estrelas"> 
-                        <div>
-                        <?php if(isset($data['estrela'])) {
-                                    
+
+
+                        <div class="estrelas">
+                            <div>
+                                <?php if (isset($data['estrela'])) {
+
                                     $ava = $data['estrela']; ?>
-                                
-                                <?php
-                                if ($ava > 0 and $ava < 2) { ?>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
-                                    <input type="radio" id="estrela_um" name="estrela" value="1">
 
-                                <?php } else if ($ava > 1 and $ava < 3) { ?>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
+                                    <?php
+                                    if ($ava > 0 and $ava < 2) { ?>
+                                        <label for="estrela_cinco"><i class="fa"></i></label>
+                                        <input type="radio" id="estrela_um" name="estrela" value="1">
 
-
-                                <?php } else if ($ava > 2 and $ava < 4) { ?>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
+                                    <?php } else if ($ava > 1 and $ava < 3) { ?>
+                                        <label for="estrela_cinco"><i class="fa"></i></label>
+                                        <label for="estrela_cinco"><i class="fa"></i></label>
 
 
-                                <?php } else if ($ava > 3 and $ava < 5) { ?>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
+                                    <?php } else if ($ava > 2 and $ava < 4) { ?>
+                                        <label for="estrela_cinco"><i class="fa"></i></label>
+                                        <label for="estrela_cinco"><i class="fa"></i></label>
+                                        <label for="estrela_cinco"><i class="fa"></i></label>
 
 
-                                <?php } else if ($ava > 4 and $ava < 6) { ?>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
+                                    <?php } else if ($ava > 3 and $ava < 5) { ?>
+                                        <label for="estrela_cinco"><i class="fa"></i></label>
+                                        <label for="estrela_cinco"><i class="fa"></i></label>
+                                        <label for="estrela_cinco"><i class="fa"></i></label>
+                                        <label for="estrela_cinco"><i class="fa"></i></label>
 
 
-                                <?php } 
-                                
-                                
-                                } else {?>
+                                    <?php } else if ($ava > 4 and $ava < 6) { ?>
+                                        <label for="estrela_cinco"><i class="fa"></i></label>
+                                        <label for="estrela_cinco"><i class="fa"></i></label>
+                                        <label for="estrela_cinco"><i class="fa"></i></label>
+                                        <label for="estrela_cinco"><i class="fa"></i></label>
+                                        <label for="estrela_cinco"><i class="fa"></i></label>
+
+
+                                    <?php }
+                                } else { ?>
 
                                     <p>Usuário sem avaliação</p>
 
-                                
+
                                 <?php } ?>
 
 
-                               
 
-                                </div>
-                            
+
+                            </div>
+
 
                         </div>
 
@@ -259,7 +277,7 @@ require "./php/includes/menu.php";
 
                         <p>Bairro: <?php
 
-                                        echo $data['bairro']; ?>
+                                    echo $data['bairro']; ?>
                         </p>
 
                         <p>Complemento: <?php
@@ -297,7 +315,7 @@ require "./php/includes/menu.php";
                         </select><br><br>
                         <textarea class="form-control" id="exampleFormControlTextarea1" name="descricao" rows="5" placeholder="Digite aqui a descrição do serviço"></textarea>
                         <button type="submit" class="btn btnstyle mt-3 btn-sm"> Enviar</button>
-                        <form>
+                    </form>
                 </div>
                 <div class="col-sm border">
                     <h4 class="display-4">Avisos</h4>
@@ -308,49 +326,85 @@ require "./php/includes/menu.php";
                     if ($result->num_rows > 0) {
 
                         while ($row = $result->fetch_assoc()) { ?>
-                        
-                        <?php  if(isset($row['tipo']) && isset($row['descricao'])) {?>
-                            <div class="Card mb-5" style="width: 18rem;">
-                                 
-                                     <h5 class="card-title"><?php echo $row['tipo']?></h5>
-                                     <p class="card-text"><?php echo $row['descricao'];?></p>
-                                     <a class="btn editDelete" href="./php/actions/deleta_servico.php?id=<?php echo $row['idservicos'];?>" data-confirm="Tem certeza que deseja excluir o intem selecionado?" >Apagar</a>
-                                <br>   
 
-                                
-                             </div>
-
-
-                             <?php } else if (isset($row['parceiro']) && isset($row['mensagem'])) { ?>
+                            <?php if (isset($row['tipo']) && isset($row['descricao'])) { ?>
                                 <div class="Card mb-5" style="width: 18rem;">
-                                 
-                             
-                                     <h5 class="card-title"><?php echo"Voçe recebeu um match de:  ", $row['parceiro']?></h5>
-                                     <p class="card-text"><?php echo "Recado: ", $row['mensagem'];?></p> 
-                                     <a class="btn editDelete" href="./php/actions/deleta_servico.php?id=<?php echo $row['idservicos'];?>" data-confirm="Tem certeza que deseja excluir o intem selecionado?" >Apagar</a>
-                             <br>         
 
-                               
-                             </div>
-                             <?php  } ?>
-                           
-                                   
+                                    <h5 class="card-title"><?php echo $row['tipo'] ?></h5>
+                                    <p class="card-text"><?php echo $row['descricao']; ?></p>
+                                    <a class="btn editDelete" href="./php/actions/deleta_servico.php?id=<?php echo $row['idservicos']; ?>" data-confirm="Tem certeza que deseja excluir o intem selecionado?">Apagar</a>
 
-             <?php
-                     }
-                 
-                 }else{
-                     echo '<p>'. 'Nenhuma solicitação feita!'. '<p>';
-                 }
-            
-            ?>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary BtnEdit" data-toggle="modal" data-target="#exampleModal">
+                                        Editar
+                                    </button>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Digite a mensagem novamente.</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form class="form text-center" method="POST" action="./php/actions/postEditOferecerServico.php?id=<?php echo $row['idservicos']; ?>">
+
+
+                                                        <textarea class="form-control" type="text" name="editar" id="editar"></textarea>
+                                        
+
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                                    <button type="submit" class="btn btn-primary">Salvar alterações</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </form>
+
+
+                                    <!-- <button class="btn BtnEdit" href="./php/actions/deleta_servico.php?id=<?php echo $row['idservicos']; ?>" data-confirm="Tem certeza que deseja excluir o intem selecionado?">Editar</button> -->
+                                    <br>
+
+
+                                </div>
+
+
+                            <?php } else if (isset($row['parceiro']) && isset($row['mensagem'])) { ?>
+                                <div class="Card mb-5" style="width: 18rem;">
+
+
+                                    <h5 class="card-title"><?php echo "Voçe recebeu um match de:  ", $row['parceiro'] ?></h5>
+                                    <p class="card-text"><?php echo "Recado: ", $row['mensagem']; ?></p>
+                                    <a class="btn editDelete" href="./php/actions/deleta_servico.php?id=<?php echo $row['idservicos']; ?>" data-confirm="Tem certeza que deseja excluir o intem selecionado?">Apagar</a>
+
+                                    <br>
+
+
+                                </div>
+                            <?php  } ?>
+
+
+
+                    <?php
+                        }
+                    } else {
+                        echo '<p>' . 'Nenhuma solicitação feita!' . '<p>';
+                    }
+
+                    ?>
 
                 </div>
 
-            
+
             </div>
 
-           
+
         </div>
     </div>
 

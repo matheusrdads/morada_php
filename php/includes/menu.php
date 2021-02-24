@@ -11,13 +11,21 @@
         border: transparent !important;
         color: white !important;
     }
+
+    .bg-darkk{
+        background: rgb(0,82,195);
+background: linear-gradient(270deg, rgba(0,82,195,1) 0%, rgba(139,0,218,1) 76%);
+    }
+    .nav-link:hover{
+        color: #FF8F00 !important;
+    }
 </style>
 <script src="https://kit.fontawesome.com/9bc643a911.js" crossorigin="anonymous"></script>
 <header class="menu-principal">
     <main>
         <div class="header-1">
             <div class="redes-sociais">
-                <ul class="nav justify-content-end " style="background-color: rgb(43, 43, 43);">
+                <ul class="nav justify-content-end " style="background-color: #000;">
                     <li class="nav-item"><a href="https://www.linkedin.com/" class="nav-link"> <img src="img/icones/linkedin.png" /></a></li>
                     <li class="nav-item"><a href="https://www.facebook.com/" class="nav-link"> <img src="img/icones/face.png" /></a></li>
                     <li class="nav-item"><a href="https://www.twitter.com/" class="nav-link"> <img src="img/icones/tw.png" /></a></li>
@@ -29,7 +37,7 @@
 </header>
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-darkk">
     <div class="container">
         <a class="navbar-brand" href="index.php"><img src="img/logo.png" width="40px" /></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Alterna navegação">
