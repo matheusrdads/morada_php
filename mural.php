@@ -8,7 +8,7 @@ require "./php/actions/conexaodb.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos</title>
+    <title>Mural</title>
 
     <!--css-->
     <link rel="stylesheet" href="css/projetos.css">
@@ -16,8 +16,8 @@ require "./php/actions/conexaodb.php";
     <!--icones-->
     <link rel="icon" href="img/logomorada.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
-     <!--css-->
+
+    <!--css-->
     <style>
         .editOferecendo {
             color: #fff !important;
@@ -62,6 +62,7 @@ require "./php/actions/conexaodb.php";
         .editSolicitando:hover {
             box-shadow: 0px 1px 18px #1145ff;
         }
+
         .jumbotron {
             height: 95%;
             border: 2px solid #fff;
@@ -112,7 +113,7 @@ require "./php/actions/conexaodb.php";
             margin: 0;
             font-size: 18px;
             /* height: 200px !important; */
-            
+
         }
 
         .anyClass {
@@ -131,8 +132,8 @@ require "./php/actions/conexaodb.php";
 
 <body>
 
-<?php
-require "./php/includes/menu.php"; ?>
+    <?php
+    require "./php/includes/menu.php"; ?>
 
     <!-- Titulo Mural -->
     <div class="container text-center">
@@ -179,51 +180,52 @@ require "./php/includes/menu.php"; ?>
                             </div>
 
                         </div>
-                    <?php }
+                        <?php }
                 } else {
 
                     while ($row = $result->fetch_assoc()) {
-                    
-                        if($row['tipo'] === 'oferecendo') {?>
-                        <div class="col-sm-4">
-                            <div class="card mb-5 rounded">
-                                <div class="container">
-                                    <div class="anyClass">
-                                        <h3 class="display-7"><?php echo $row['nome']; ?></h3>
-                                        <p class=" lead"><?php echo "Tipo: ", $row['descricao']; ?></p>
-                                        <p style="color: green;" class="lead"><?php echo "Status: ", $row['tipo']; ?></p>
-                                        <p class="lead"><?php echo "Bairro: ", $row['bairro']; ?></p>
-                                        <p class="lead"><?php echo "Endereço: ", $row['endereco']; ?></p>
-                                        <button type="button" class="btn text-white editOferecendo"><a href="./perfilpublico.php?id=<?php echo $row['idusuario']; ?>" >Visualizar</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                       
-                <?php }  else if ($row['tipo'] === 'solicitando'){
-
-
-                        if($row['tipo'] === 'solicitando') {?>
+                        if ($row['tipo'] === 'oferecendo') { ?>
                             <div class="col-sm-4">
                                 <div class="card mb-5 rounded">
                                     <div class="container">
                                         <div class="anyClass">
                                             <h3 class="display-7"><?php echo $row['nome']; ?></h3>
                                             <p class=" lead"><?php echo "Tipo: ", $row['descricao']; ?></p>
-                                            <p style="color: #00e0ff;" class="lead"><?php echo "Status: ", $row['tipo']; ?></p>
+                                            <p style="color: green;" class="lead"><?php echo "Status: ", $row['tipo']; ?></p>
                                             <p class="lead"><?php echo "Bairro: ", $row['bairro']; ?></p>
                                             <p class="lead"><?php echo "Endereço: ", $row['endereco']; ?></p>
-                                            <button type="button" class="btn text-white editSolicitando"><a href="./perfilpublico.php?id=<?php echo $row['idusuario'];?>">Visualizar</a></button>
+                                            <button type="button" class="btn text-white editOferecendo"><a href="./perfilpublico.php?id=<?php echo $row['idusuario']; ?>">Visualizar</a></button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                    
 
-        <?php  }    
-                  }
-                    }  }?>
+
+                            <?php } else if ($row['tipo'] === 'solicitando') {
+
+
+                            if ($row['tipo'] === 'solicitando') { ?>
+                                <div class="col-sm-4">
+                                    <div class="card mb-5 rounded">
+                                        <div class="container">
+                                            <div class="anyClass">
+                                                <h3 class="display-7"><?php echo $row['nome']; ?></h3>
+                                                <p class=" lead"><?php echo "Tipo: ", $row['descricao']; ?></p>
+                                                <p style="color: #00e0ff;" class="lead"><?php echo "Status: ", $row['tipo']; ?></p>
+                                                <p class="lead"><?php echo "Bairro: ", $row['bairro']; ?></p>
+                                                <p class="lead"><?php echo "Endereço: ", $row['endereco']; ?></p>
+                                                <button type="button" class="btn text-white editSolicitando"><a href="./perfilpublico.php?id=<?php echo $row['idusuario']; ?>">Visualizar</a></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                <?php  }
+                        }
+                    }
+                } ?>
 
                 <!-- Fecha o background color -->
             </div>

@@ -19,7 +19,7 @@ include('./php/actions/exibeDados.php');
     <!--icones-->
     <link rel="icon" href="img/logomorada.png">
 
-        
+
     <!--css-->
     <style>
         h1 {

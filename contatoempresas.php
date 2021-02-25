@@ -19,7 +19,7 @@
     <script src="./js/validacaocontato.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-        
+
     <!--css-->
     <style>
         body {
@@ -63,7 +63,7 @@
             box-shadow: 0px 1px 18px #1145ff;
         }
     </style>
-    
+
 </head>
 
 <?php
