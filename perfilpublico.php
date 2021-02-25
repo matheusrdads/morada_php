@@ -9,7 +9,7 @@ $query = "SELECT * FROM usuarios JOIN servicos ON usuarios.idusuario = servicos.
 $result = $conn->query($query);
 $data = mysqli_fetch_assoc($result);
 
-$query2 ="SELECT * FROM usuarios WHERE idusuario = $id;";
+$query2 = "SELECT * FROM usuarios WHERE idusuario = $id;";
 $result2 = $conn->query($query2);
 $data2 = mysqli_fetch_assoc($result2);
 
@@ -39,7 +39,7 @@ if (isset($_POST['estrela'])) {
     <!--css-->
     <link rel="stylesheet" type="text/css" href="./css/main.css">
     <link rel="stylesheet" type="text/css" href="./css/avaliacao.css">
-    
+
     <!--icones-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href=" http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
@@ -179,56 +179,54 @@ require "./php/includes/menu.php";
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                                     Avaliar usuário
                                 </button>
-                                
+
 
                                 <div>
-                                <?php if($data2['estrela']) {
-                                    
-                                    $ava = $data2['estrela']; ?>
-                                
-                                <?php
-                                if ($ava > 0 and $ava < 2) { ?>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
-                                    <input type="radio" id="estrela_um" name="estrela" value="1">
+                                    <?php if ($data2['estrela']) {
 
-                                <?php } else if ($ava > 1 and $ava < 3) { ?>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
+                                        $ava = $data2['estrela']; ?>
 
+                                        <?php
+                                        if ($ava > 0 and $ava < 2) { ?>
+                                            <label for="estrela_cinco"><i class="fa"></i></label>
+                                            <input type="radio" id="estrela_um" name="estrela" value="1">
 
-                                <?php } else if ($ava > 2 and $ava < 4) { ?>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
+                                        <?php } else if ($ava > 1 and $ava < 3) { ?>
+                                            <label for="estrela_cinco"><i class="fa"></i></label>
+                                            <label for="estrela_cinco"><i class="fa"></i></label>
 
 
-                                <?php } else if ($ava > 3 and $ava < 5) { ?>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
+                                        <?php } else if ($ava > 2 and $ava < 4) { ?>
+                                            <label for="estrela_cinco"><i class="fa"></i></label>
+                                            <label for="estrela_cinco"><i class="fa"></i></label>
+                                            <label for="estrela_cinco"><i class="fa"></i></label>
 
 
-                                <?php } else if ($ava > 4 and $ava < 6) { ?>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
-                                    <label for="estrela_cinco"><i class="fa"></i></label>
+                                        <?php } else if ($ava > 3 and $ava < 5) { ?>
+                                            <label for="estrela_cinco"><i class="fa"></i></label>
+                                            <label for="estrela_cinco"><i class="fa"></i></label>
+                                            <label for="estrela_cinco"><i class="fa"></i></label>
+                                            <label for="estrela_cinco"><i class="fa"></i></label>
 
 
-                                <?php } 
-                                
-                                
-                                } else {?>
-
-                                    <p>Usuário sem avaliação</p>
-
-                                
-                                <?php } ?>
+                                        <?php } else if ($ava > 4 and $ava < 6) { ?>
+                                            <label for="estrela_cinco"><i class="fa"></i></label>
+                                            <label for="estrela_cinco"><i class="fa"></i></label>
+                                            <label for="estrela_cinco"><i class="fa"></i></label>
+                                            <label for="estrela_cinco"><i class="fa"></i></label>
+                                            <label for="estrela_cinco"><i class="fa"></i></label>
 
 
-                               
+                                        <?php }
+                                    } else { ?>
+
+                                        <p>Usuário sem avaliação</p>
+
+
+                                    <?php } ?>
+
+
+
 
                                 </div>
 
@@ -279,7 +277,7 @@ require "./php/includes/menu.php";
 
                                 </form>
 
-                                
+
                             </div>
                         </div>
 
@@ -315,9 +313,9 @@ require "./php/includes/menu.php";
                         while ($row = $result->fetch_assoc()) {
 
                     ?>
-                            <div class="Card" style="width: 18rem;">   
-                                    <h5 class="card-title"><?php echo $row['tipo'] ?></h5>
-                                    <p class="card-text"><?php echo $row['descricao']; ?></p>
+                            <div class="Card" style="width: 18rem;">
+                                <h5 class="card-title"><?php echo $row['tipo'] ?></h5>
+                                <p class="card-text"><?php echo $row['descricao']; ?></p>
                             </div>
 
                             <br>
@@ -329,7 +327,7 @@ require "./php/includes/menu.php";
 
                     ?>
 
-                        <form class="form text-center mt-1" method="post" action="./php/actions/mensagem.php?id=<?php echo $data['idusuario']; ?>">
+                    <form class="form text-center mt-1" method="post" action="./php/actions/mensagem.php?id=<?php echo $data['idusuario']; ?>">
                         <label for="">
                             <h4 class="display-4 ">Ajude essa Pessoa</h4>
                             <p class="text-danger" style=" font-weight: 500;">Mande uma mensagem para esse usuário pedindo mais informações sobre o serviço, e passe pelo menos um contato para que ela possa retornar.</p>

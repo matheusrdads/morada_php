@@ -72,15 +72,15 @@ session_start();
             text-align: center
         }
     </style>
-    
+
 </head>
 
 <body>
 
-<?php
+    <?php
 
-require "./php/includes/menu.php";
-?>
+    require "./php/includes/menu.php";
+    ?>
     <div class="container">
         <div class="jumbotron mt-5 mb-5">
             <h1 class="display-4 text-center mb-5 pt-5 text-white">Login</h1>

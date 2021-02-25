@@ -19,6 +19,13 @@ background: linear-gradient(270deg, rgba(0,82,195,1) 0%, rgba(139,0,218,1) 76%);
     .nav-link:hover{
         color: #FF8F00 !important;
     }
+
+    .navbar-nav{
+        z-index: 999 !important;  
+    }
+    .navbar-toggler{
+        z-index: 999 !important;  
+    }
 </style>
 <script src="https://kit.fontawesome.com/9bc643a911.js" crossorigin="anonymous"></script>
 <header class="menu-principal">
