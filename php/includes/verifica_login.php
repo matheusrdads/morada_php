@@ -3,6 +3,14 @@
     session_start();
     
     if(!$_SESSION['email']) {
-	header('Location: index.php');
-    exit();
+	
+
+    echo ("<script>
+        window.alert('efetue o login para acessar este conteúdo!')
+        window.location.href='login.php';
+    </script>");
+
+
+    // header('Location: login.php');
+    // exit();
     }
