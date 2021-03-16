@@ -125,54 +125,10 @@ require "./php/includes/menu.php";
                                     <div class="card mb-2" style="background-color: transparent;">
                                         <img class="card-img-top" src="<?php echo $row_carousel['imagem']; ?>" alt="<?php echo $row_carousel['nome']; ?>" style="width: 25%; margin-left: auto; margin-right: auto; border-radius: 50%;">
                                         <div class="card-body">
+                                            <?php
+                                                include('./php/includes/estrelas.php')
+                                            ?>
 
-                                            <div class="estrelas">
-                                                <div>
-                                                    <?php if (isset($row_carousel['estrela'])) {
-
-                                                        $ava = $row_carousel['estrela']; ?>
-
-                                                        <?php
-                                                        if ($ava > 0 and $ava < 2) { ?>
-                                                            <label for="estrela_cinco"><i class="fa"></i></label>
-                                                            <input type="radio" id="estrela_um" name="estrela" value="1">
-
-                                                        <?php } else if ($ava > 1 and $ava < 3) { ?>
-                                                            <label for="estrela_cinco"><i class="fa"></i></label>
-                                                            <label for="estrela_cinco"><i class="fa"></i></label>
-
-
-                                                        <?php } else if ($ava > 2 and $ava < 4) { ?>
-                                                            <label for="estrela_cinco"><i class="fa"></i></label>
-                                                            <label for="estrela_cinco"><i class="fa"></i></label>
-                                                            <label for="estrela_cinco"><i class="fa"></i></label>
-
-
-                                                        <?php } else if ($ava > 3 and $ava < 5) { ?>
-                                                            <label for="estrela_cinco"><i class="fa"></i></label>
-                                                            <label for="estrela_cinco"><i class="fa"></i></label>
-                                                            <label for="estrela_cinco"><i class="fa"></i></label>
-                                                            <label for="estrela_cinco"><i class="fa"></i></label>
-
-
-                                                        <?php } else if ($ava > 4 and $ava < 6) { ?>
-                                                            <label for="estrela_cinco"><i class="fa"></i></label>
-                                                            <label for="estrela_cinco"><i class="fa"></i></label>
-                                                            <label for="estrela_cinco"><i class="fa"></i></label>
-                                                            <label for="estrela_cinco"><i class="fa"></i></label>
-                                                            <label for="estrela_cinco"><i class="fa"></i></label>
-
-
-                                                        <?php }
-                                                    } else { ?>
-
-                                                        <p>Usuário sem avaliação</p>
-
-                                                    <?php } ?>
-
-                                                </div>
-
-                                            </div>
                                             <h4 class="card-title"><?php echo $row_carousel['nome']; ?></h4>
                                             <p style="margin-bottom: 30px;"><?php echo $row_carousel['sobre']; ?></p>
                                         </div>
@@ -191,56 +147,10 @@ require "./php/includes/menu.php";
                                     <div class="col">
                                         <div class="card mb-2" style="background-color: transparent;">
                                             <img class="card-img-top" src="<?php echo $row_carousel['imagem']; ?>" alt="<?php echo $row_carousel['nome']; ?>" style="width: 25%; margin-left: auto; margin-right: auto; border-radius: 50%;">
-
                                             <div class="card-body">
-
-                                                <div class="estrelas">
-                                                    <div>
-                                                        <?php if (isset($row_carousel['estrela'])) {
-
-                                                            $ava = $row_carousel['estrela']; ?>
-
-                                                            <?php
-                                                            if ($ava > 0 and $ava < 2) { ?>
-                                                                <label for="estrela_cinco"><i class="fa"></i></label>
-                                                                <input type="radio" id="estrela_um" name="estrela" value="1">
-
-                                                            <?php } else if ($ava > 1 and $ava < 3) { ?>
-                                                                <label for="estrela_cinco"><i class="fa"></i></label>
-                                                                <label for="estrela_cinco"><i class="fa"></i></label>
-
-
-                                                            <?php } else if ($ava > 2 and $ava < 4) { ?>
-                                                                <label for="estrela_cinco"><i class="fa"></i></label>
-                                                                <label for="estrela_cinco"><i class="fa"></i></label>
-                                                                <label for="estrela_cinco"><i class="fa"></i></label>
-
-
-                                                            <?php } else if ($ava > 3 and $ava < 5) { ?>
-                                                                <label for="estrela_cinco"><i class="fa"></i></label>
-                                                                <label for="estrela_cinco"><i class="fa"></i></label>
-                                                                <label for="estrela_cinco"><i class="fa"></i></label>
-                                                                <label for="estrela_cinco"><i class="fa"></i></label>
-
-
-                                                            <?php } else if ($ava > 4 and $ava < 6) { ?>
-                                                                <label for="estrela_cinco"><i class="fa"></i></label>
-                                                                <label for="estrela_cinco"><i class="fa"></i></label>
-                                                                <label for="estrela_cinco"><i class="fa"></i></label>
-                                                                <label for="estrela_cinco"><i class="fa"></i></label>
-                                                                <label for="estrela_cinco"><i class="fa"></i></label>
-
-
-                                                            <?php }
-                                                        } else { ?>
-
-                                                            <p>Usuário sem avaliação</p>
-
-                                                        <?php } ?>
-
-                                                    </div>
-
-                                                </div>
+                                                <?php
+                                                    include('./php/includes/estrelas.php')
+                                                ?>
 
                                                 <h4 class="card-title"><?php echo $row_carousel['nome']; ?></h4>
 
@@ -248,14 +158,9 @@ require "./php/includes/menu.php";
                                             </div>
                                         </div>
                                     </div>
-
-
                                 </div>
-
-                            </div> <?php
-                                }
-                            }
-                                    ?>
+                            </div> 
+                        <?php }} ?>          
                 </div>
             </div>
         </div>

@@ -302,11 +302,7 @@ require "./php/includes/menu.php";
 
                                 <?php } ?>
 
-
-
-
                             </div>
-
 
                         </div>
 
@@ -428,11 +424,24 @@ require "./php/includes/menu.php";
 
                                     <a class="btn btnFim" href="./php/actions/postServicoFinalizado.php?id=<?php echo $row['idservicos'] ?>&fim=<?php echo $row['fim'] ?>">Finalizado</a>
 
-                                    <p style="margin-bottom: 0.2rem">Iniciado em: <?php $data = $row['inicio'];
-                                                                                    echo date('d-m-y', strtotime($data)); ?></p>
 
-                                    <p style="margin-bottom: 0.2rem">Finalizado em: <?php $data = $row['fim'];
-                                                                                    echo date('d-m-y', strtotime($data)); ?></p>
+                                    <?php if ($row['inicio']) { ?>
+
+                                        <p style="margin-bottom: 0.2rem">Iniciado em:<?php $data = $row['inicio'];
+                                                                                        echo date('d-m-y', strtotime($data)); ?></p>
+
+                                    <?php } else { ?>
+                                        <p>Aguardando match</p>
+                                    <?php }  ?>
+
+                                    <?php if ($row['fim']) { ?>
+
+                                        <p style="margin-bottom: 0.2rem">Iniciado em:<?php $data = $row['fim'];
+                                                                                        echo date('d-m-y', strtotime($data)); ?></p>
+
+                                    <?php } else { ?>
+                                        <p></p>
+                                    <?php }  ?>
 
 
 

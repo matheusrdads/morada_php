@@ -2,7 +2,6 @@
 include('./php/includes/verifica_login.php');
 include('./php/actions/conexaodb.php');
 
-
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 $query = "SELECT * FROM usuarios JOIN servicos ON usuarios.idusuario = servicos.usuario WHERE idusuario = $id ; ";
 $result = $conn->query($query);
@@ -11,7 +10,6 @@ $data = mysqli_fetch_assoc($result);
 $query2 = "SELECT * FROM usuarios WHERE idusuario = $id;";
 $result2 = $conn->query($query2);
 $data2 = mysqli_fetch_assoc($result2);
-
 
 ?>
 
@@ -167,7 +165,6 @@ require "./php/includes/menu.php";
                                     Avaliar usuário
                                 </button>
 
-
                                 <div>
                                     <?php if ($data2['estrela']) {
 
@@ -209,16 +206,9 @@ require "./php/includes/menu.php";
 
                                         <p>Usuário sem avaliação</p>
 
-
                                     <?php } ?>
 
-
-
-
                                 </div>
-
-
-
 
 
                                 <!-- Modal -->
