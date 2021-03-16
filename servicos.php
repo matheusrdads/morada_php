@@ -1,3 +1,7 @@
+<?php
+include('./php/actions/conexaodb.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -10,6 +14,8 @@
 
     <!--css-->
     <link rel="stylesheet" href="css/main.css">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/avaliacao.css">
 
     <!--icones-->
     <link rel="icon" href="img/logomorada.png">
@@ -82,113 +88,181 @@ require "./php/includes/menu.php";
         </div>
         <hr>
         <h2 class="display-3 pt-5">Destaques</h2>
-        <!--Carousel Wrapper-->
-        <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-            <!--Controls-->
-            <div class="controls-top">
-                <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
-                <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fas fa-chevron-right"></i></a>
-            </div>
-            <!--/.Controls-->
-            <!--Indicators-->
-            <ol class="carousel-indicators">
-                <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-                <li data-target="#multi-item-example" data-slide-to="1"></li>
-            </ol>
-            <!--/.Indicators-->
-            <!--Slides-->
-            <div class="carousel-inner" role="listbox">
-                <!--First slide-->
-                <div class="carousel-item active">
-                    <div class="col-md-3" style="float:left">
-                        <div class="card mb-2">
-                            <img class="card-img-top" src="./img/icones/profile-icon.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title">Luiz Claudio</h4>
-                                <a class="btn submitbtn ">Perfil</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3" style="float:left">
-                        <div class="card mb-2">
-                            <img class="card-img-top" src="./img/icones/profile-icon.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title">Atonio Lopes</h4>
-                                <a class="btn submitbtn">Perfil</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3" style="float:left">
-                        <div class="card mb-2">
-                            <img class="card-img-top" src="./img/icones/profile-icon.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title">Marcos Antonio</h4>
-                                <a class="btn submitbtn">Perfil</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3" style="float:left">
-                        <div class="card mb-2">
-                            <img class="card-img-top" src="./img/icones/profile-icon.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title">Julia Nascimento</h4>
-                                <a class="btn submitbtn">Perfil</a>
-                            </div>
-                        </div>
-                    </div>
 
+        <div class="espaco-topo">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <?php
+                    $controle_ativo = 2;
+                    $controle_num_slide = 1;
+                    $result_carousel = "SELECT * FROM usuarios  WHERE estrela > 3 Limit 5";
+                    $resultado_carousel = mysqli_query($conn, $result_carousel);
+                    while ($row_carousel = mysqli_fetch_assoc($resultado_carousel)) {
+                        if ($controle_ativo == 2) { ?>
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li><?php
+                                                                                                                $controle_ativo = 1;
+                                                                                                            } else { ?>
+                            <li data-target="#carousel-example-generic" data-slide-to="<?php echo $controle_num_slide; ?>"></li><?php
+                                                                                                                                $controle_num_slide++;
+                                                                                                                            }
+                                                                                                                        }
+                                                                                                                                ?>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <?php
+                    $controle_ativo = 2;
+                    $result_carousel = "SELECT * FROM usuarios  WHERE estrela > 3 Limit 5";
+                    $resultado_carousel = mysqli_query($conn, $result_carousel);
+                    while ($row_carousel = mysqli_fetch_assoc($resultado_carousel)) {
+                        if ($controle_ativo == 2) { ?>
+
+                            <div class="item active">
+
+                                <div class="col">
+                                    <div class="card mb-2" style="background-color: transparent;">
+                                        <img class="card-img-top" src="<?php echo $row_carousel['imagem']; ?>" alt="<?php echo $row_carousel['nome']; ?>" style="width: 25%; margin-left: auto; margin-right: auto; border-radius: 50%;">
+                                        <div class="card-body">
+
+                                            <div class="estrelas">
+                                                <div>
+                                                    <?php if (isset($row_carousel['estrela'])) {
+
+                                                        $ava = $row_carousel['estrela']; ?>
+
+                                                        <?php
+                                                        if ($ava > 0 and $ava < 2) { ?>
+                                                            <label for="estrela_cinco"><i class="fa"></i></label>
+                                                            <input type="radio" id="estrela_um" name="estrela" value="1">
+
+                                                        <?php } else if ($ava > 1 and $ava < 3) { ?>
+                                                            <label for="estrela_cinco"><i class="fa"></i></label>
+                                                            <label for="estrela_cinco"><i class="fa"></i></label>
+
+
+                                                        <?php } else if ($ava > 2 and $ava < 4) { ?>
+                                                            <label for="estrela_cinco"><i class="fa"></i></label>
+                                                            <label for="estrela_cinco"><i class="fa"></i></label>
+                                                            <label for="estrela_cinco"><i class="fa"></i></label>
+
+
+                                                        <?php } else if ($ava > 3 and $ava < 5) { ?>
+                                                            <label for="estrela_cinco"><i class="fa"></i></label>
+                                                            <label for="estrela_cinco"><i class="fa"></i></label>
+                                                            <label for="estrela_cinco"><i class="fa"></i></label>
+                                                            <label for="estrela_cinco"><i class="fa"></i></label>
+
+
+                                                        <?php } else if ($ava > 4 and $ava < 6) { ?>
+                                                            <label for="estrela_cinco"><i class="fa"></i></label>
+                                                            <label for="estrela_cinco"><i class="fa"></i></label>
+                                                            <label for="estrela_cinco"><i class="fa"></i></label>
+                                                            <label for="estrela_cinco"><i class="fa"></i></label>
+                                                            <label for="estrela_cinco"><i class="fa"></i></label>
+
+
+                                                        <?php }
+                                                    } else { ?>
+
+                                                        <p>Usuário sem avaliação</p>
+
+                                                    <?php } ?>
+
+                                                </div>
+
+                                            </div>
+                                            <h4 class="card-title"><?php echo $row_carousel['nome']; ?></h4>
+                                            <p style="margin-bottom: 30px;"><?php echo $row_carousel['sobre']; ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        <?php
+                            $controle_ativo = 1;
+                        } else { ?>
+                            <div class="item">
+
+                                <div class="item active">
+
+                                    <div class="col">
+                                        <div class="card mb-2" style="background-color: transparent;">
+                                            <img class="card-img-top" src="<?php echo $row_carousel['imagem']; ?>" alt="<?php echo $row_carousel['nome']; ?>" style="width: 25%; margin-left: auto; margin-right: auto; border-radius: 50%;">
+
+                                            <div class="card-body">
+
+                                                <div class="estrelas">
+                                                    <div>
+                                                        <?php if (isset($row_carousel['estrela'])) {
+
+                                                            $ava = $row_carousel['estrela']; ?>
+
+                                                            <?php
+                                                            if ($ava > 0 and $ava < 2) { ?>
+                                                                <label for="estrela_cinco"><i class="fa"></i></label>
+                                                                <input type="radio" id="estrela_um" name="estrela" value="1">
+
+                                                            <?php } else if ($ava > 1 and $ava < 3) { ?>
+                                                                <label for="estrela_cinco"><i class="fa"></i></label>
+                                                                <label for="estrela_cinco"><i class="fa"></i></label>
+
+
+                                                            <?php } else if ($ava > 2 and $ava < 4) { ?>
+                                                                <label for="estrela_cinco"><i class="fa"></i></label>
+                                                                <label for="estrela_cinco"><i class="fa"></i></label>
+                                                                <label for="estrela_cinco"><i class="fa"></i></label>
+
+
+                                                            <?php } else if ($ava > 3 and $ava < 5) { ?>
+                                                                <label for="estrela_cinco"><i class="fa"></i></label>
+                                                                <label for="estrela_cinco"><i class="fa"></i></label>
+                                                                <label for="estrela_cinco"><i class="fa"></i></label>
+                                                                <label for="estrela_cinco"><i class="fa"></i></label>
+
+
+                                                            <?php } else if ($ava > 4 and $ava < 6) { ?>
+                                                                <label for="estrela_cinco"><i class="fa"></i></label>
+                                                                <label for="estrela_cinco"><i class="fa"></i></label>
+                                                                <label for="estrela_cinco"><i class="fa"></i></label>
+                                                                <label for="estrela_cinco"><i class="fa"></i></label>
+                                                                <label for="estrela_cinco"><i class="fa"></i></label>
+
+
+                                                            <?php }
+                                                        } else { ?>
+
+                                                            <p>Usuário sem avaliação</p>
+
+                                                        <?php } ?>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <h4 class="card-title"><?php echo $row_carousel['nome']; ?></h4>
+
+                                                <p style="margin-bottom: 30px;"><?php echo $row_carousel['sobre']; ?></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div> <?php
+                                }
+                            }
+                                    ?>
                 </div>
-                <!--/.First slide-->
-
-                <!--Second slide-->
-                <div class="carousel-item">
-                    <div class="col-md-3" style="float:left">
-                        <div class="card mb-2">
-                            <img class="card-img-top" src="./img/icones/profile-icon.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title">Marcos Ferreira</h4>
-                                <a class="btn submitbtn">Perfil</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3" style="float:left">
-                        <div class="card mb-2">
-                            <img class="card-img-top" src="./img/icones/profile-icon.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title">Nathan Pereira</h4>
-                                <a class="btn submitbtn">Perfil</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3" style="float:left">
-                        <div class="card mb-2">
-                            <img class="card-img-top" src="./img/icones/profile-icon.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title">Luiz Henrique</h4>
-
-                                <a class="btn submitbtn">Perfil</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3" style="float:left">
-                        <div class="card mb-2">
-                            <img class="card-img-top" src="./img/icones/profile-icon.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title">Caio Andrade</h4>
-                                <a class="btn submitbtn">Perfil</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--/.Second slide-->
             </div>
-            <!--/.Slides-->
         </div>
-        <!--/.Carousel Wrapper-->
     </div>
+
+
+
     <!--Footer-->
 
     <?php
@@ -196,8 +270,15 @@ require "./php/includes/menu.php";
     ?>
 
 </body>
+<!-- caroucel -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- caroucel -->
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
 
 </html>

@@ -5,7 +5,6 @@ include('./php/actions/conexaodb.php');
 
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 $query = "SELECT * FROM usuarios JOIN servicos ON usuarios.idusuario = servicos.usuario WHERE idusuario = $id ; ";
-// $query ="SELECT * FROM usuarios WHERE idusuario = $id;";
 $result = $conn->query($query);
 $data = mysqli_fetch_assoc($result);
 
@@ -13,18 +12,6 @@ $query2 = "SELECT * FROM usuarios WHERE idusuario = $id;";
 $result2 = $conn->query($query2);
 $data2 = mysqli_fetch_assoc($result2);
 
-
-if (isset($_POST['estrela'])) {
-    $estrela = $_POST['estrela'];
-
-    $result_avaliacoes = " UPDATE  usuarios SET estrela = '$estrela'   WHERE idusuario = '$id' ";
-
-    $resultado_avaliacoes = mysqli_query($conn, $result_avaliacoes);
-    if (mysqli_insert_id($conn)) {
-        // $_SESSION['msg'] = "Usuário avaliado com sucesso";
-        header("Location: ./perfilpublico.php");
-    }
-}
 
 ?>
 
